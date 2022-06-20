@@ -1,6 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'HomeScreen.dart';
+import 'Home/HomeScreen.dart';
 import 'package:material_color_utilities/material_color_utilities.dart';
 
 void main() {
