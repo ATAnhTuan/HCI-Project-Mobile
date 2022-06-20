@@ -70,12 +70,18 @@ class Available extends StatelessWidget {
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(13),
           border: Border.all(color: Colors.blueGrey, width: 2)),
-      child: Column(children: [
-        Image.asset(images),
-        Text(
-          title
-        )
-      ]),
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: (){},
+          child: Column(children: [
+            Image.asset(images),
+            Text(
+              title
+            )
+          ]),
+        ),
+      ),
     );
   }
 }
