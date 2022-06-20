@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'HomeScreen.dart';
 import 'package:material_color_utilities/material_color_utilities.dart';
 
 void main() {
@@ -8,75 +9,79 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    Widget widget = Container();
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-            elevation: 0,
-            leading:
-                IconButton(onPressed: null, icon: Icon(Icons.notifications)),
-            centerTitle: true,
-            title: Text('Foot Ball App'),
-            foregroundColor: Colors.white,
-            backgroundColor: Colors.green[400]),
-        body: HomeScreen(),
-        bottomNavigationBar: BottomNavigationBar(
-            backgroundColor: Colors.green[400],
-            selectedItemColor: Colors.white,
-            unselectedItemColor: Colors.black,
-            type: BottomNavigationBarType.fixed,
-            items: const [
-              BottomNavigationBarItem(label: "", icon: Icon(Icons.home)),
-              BottomNavigationBarItem(label: "", icon: Icon(Icons.chat_bubble)),
-              BottomNavigationBarItem(label: "", icon: Icon(Icons.search)),
-              BottomNavigationBarItem(label: "", icon: Icon(Icons.settings)),
-            ]),
-      ),
+      home: MyStatefulWidget(),
     );
   }
 }
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class MyStatefulWidget extends StatefulWidget {
+  const MyStatefulWidget({Key? key}) : super(key: key);
 
   @override
+  State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
+}
+
+class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+  int _selectedIndex = 0;
+  static const TextStyle optionStyle =
+      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  static const List<Widget> _widgetOptions = <Widget>[
+   HomeScreen(),
+    Text(
+      'Index 1: Chat',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 2: Search',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 3: Profile',
+      style: optionStyle,
+    )
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+  @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Scaffold(
-      body: Stack(
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10),
-            child: Row(
-              children: <Widget>[
-                Container(
-                  height: size.height * 0.2,
-                  child: Stack(
-                    children: <Widget>[
-                      Text(
-                        "Sân Có Sẵn",
-                        style: TextStyle(
-                            fontSize: 18,
-                            color: Colors.red,
-                            fontWeight: FontWeight.bold),
-                      )
-                    ],
-                  ),
-                ),
-              ],
-            ),
+      body: Center(
+        child: _widgetOptions.elementAt(_selectedIndex),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Colors.green[400],
+        unselectedItemColor: Colors.white,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home_outlined),
+            label: 'Trang Chủ',
           ),
-          Container(
-            margin: const EdgeInsets.only(top: 20),
-            height: size.height * 0.2,
-            child: Expanded(
-              child: Stack(),
-            ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.chat_bubble_outline),
+            label: 'Chat',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search_outlined),
+            label: 'Tìm kiếm',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person_outlined),
+            label: 'Thông Tin',
           )
         ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.white,
+        onTap: _onItemTapped,
       ),
     );
   }
