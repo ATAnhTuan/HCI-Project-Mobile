@@ -23,8 +23,9 @@ class LoginScreenTopImage extends StatelessWidget {
           ],
         ),
         Text(
+
           "Đăng nhập",
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),
         ),
         SizedBox(height: defaultPadding * 2),
       ],

@@ -15,15 +15,15 @@ class SignUpScreenTopImage extends StatelessWidget {
           children: [
             const Spacer(),
             Expanded(
-              flex:8,
-              child: Image.asset("assets/images/Enter OTP-amico.png"),
+              flex:30,
+              child: Image.asset("assets/images/login.png"),
             ),
             const Spacer(),
           ],
         ),
         Text(
           "Đăng ký",
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
         ),
         SizedBox(height: defaultPadding * 2),
       ],
