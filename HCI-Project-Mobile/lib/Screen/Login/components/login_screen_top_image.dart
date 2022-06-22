@@ -22,10 +22,16 @@ class LoginScreenTopImage extends StatelessWidget {
             const Spacer(),
           ],
         ),
-        Text(
-
-          "Đăng nhập",
-          style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),
+        Padding(
+          padding: EdgeInsets.only(left: 25),
+          child: Row(
+            children: [
+              Text(
+                "Đăng nhập",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+              ),
+            ],
+          ),
         ),
         SizedBox(height: defaultPadding * 2),
       ],
