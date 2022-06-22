@@ -1,4 +1,9 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Screen/Home/BottomBar.dart';
+import 'Santhuduc.dart';
+import 'BottomBar.dart';
 import 'package:flutter_application_1/Screen/Home/Santhuduc.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -8,41 +13,77 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(
-          elevation: 0,
-          leading: IconButton(onPressed: null, icon: Icon(Icons.notifications)),
-          centerTitle: true,
-          title: Text('Foot Ball App'),
-          foregroundColor: Colors.white,
-          backgroundColor: Colors.green[400]),
-      body: Stack(
-        children: <Widget>[
-          TitleItem(),
-          Items()
-        ],
+      body: Container(
+        padding: const EdgeInsets.only(top: 25),
+        child: SingleChildScrollView(child: Column(
+          children: [
+            Container(
+              color: Colors.green[400],
+              child: Row(
+                children: [
+                  IconButton(onPressed: () {}, icon: Icon(Icons.notifications)),
+                  Spacer(),
+                  Text(
+                    "Trang Chủ",
+                    style: TextStyle(
+                        fontSize: 25,
+                        color: Colors.black,
+                        fontWeight: FontWeight.w700),
+                  ),
+                  Spacer(),
+                  IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
+                ],
+              ),
+            ),
+            ItemTitle(title: "Sân Có Sẵn"),
+            List2Items(
+                title1: "Sân Thủ Đức",
+                image1: "assets/images/thuduc.png",
+                title2: "Sân Quận 9",
+                image2: "assets/images/quan9.jpg"),
+            ItemTitle(title: "Nhiều Người Yêu Thích"),
+            List2Items(
+                title1: "Sân Gò Vấp",
+                image1: "assets/images/govap.jpg",
+                title2: "Sân Quận 2",
+                image2: "assets/images/quan2.jpg"),
+            ItemTitle(title: "Sân Đang Giảm Giá"),
+            List2Items(
+                title1: "Sân Quận 5",
+                image1: "assets/images/quan5.jpg",
+                title2: "Sân Quận 4",
+                image2: "assets/images/quan4.jpg"),
+          ],
+        ), )
       ),
     );
   }
 }
 
-class TitleItem extends StatelessWidget {
-  const TitleItem({
+class List2Items extends StatelessWidget {
+  final String title1, title2;
+  final String image1, image2;
+  const List2Items({
     Key? key,
+    required this.title1,
+    required this.title2,
+    required this.image1,
+    required this.image2,
   }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 10),
-      child: Container(
-        child: Stack(
+    return Container(
+      height: 230,
+      child: Expanded(
+        child: GridView.count(
+          crossAxisSpacing: 2,
+          mainAxisSpacing: 2,
+          crossAxisCount: 2,
           children: <Widget>[
-            Text(
-              "Sân Có Sẵn",
-              style: TextStyle(
-                  fontSize: 18,
-                  color: Colors.red,
-                  fontWeight: FontWeight.bold),
+            Item(tile: title1, image: image1),
+            Item(
+              tile: title2,
+              image: image2,
             )
           ],
         ),
@@ -51,61 +92,101 @@ class TitleItem extends StatelessWidget {
   }
 }
 
-class Items extends StatelessWidget {
-  const Items({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(top: 20),
-      child: Expanded(
-          child: GridView.count(
-        crossAxisCount: 2,
-        crossAxisSpacing: 20,
-        mainAxisSpacing: 20,
-        children: <Widget>[
-          Available(
-            images: "assets/images/thuduc.png",
-            title: "Sân Thủ Đức",
-          ),
-          Available(
-            images: "assets/images/quan9.jpg",
-            title: "Sân Quận 9",
-          )
-        ],
-      )),
-    );
-  }
-}
-
-class Available extends StatelessWidget {
-  final String images;
+class ItemTitle extends StatelessWidget {
   final String title;
-  const Available({
+  const ItemTitle({
     Key? key,
-    required this.images,
     required this.title,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(5),
+      padding: const EdgeInsets.only(left: 5, top: 5),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Text(
+            title,
+            style: TextStyle(
+              color: Colors.red,
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class Item extends StatelessWidget {
+  final String tile;
+  final String image;
+  const Item({
+    Key? key,
+    required this.tile,
+    required this.image,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.only(top: 10, left: 15, right: 15),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(13),
-          border: Border.all(color: Colors.blueGrey, width: 2)),
+        borderRadius: BorderRadius.circular(13),
+        border: Border.all(color: Colors.blueGrey, width: 2),
+      ),
       child: Material(
         color: Colors.transparent,
         child: InkWell(
           onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const FootballField()),
-            );
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const FootballField()));
           },
-          child: Column(children: [Image.asset(images), Text(title)]),
+          child: Column(
+            children: [
+              Image.asset(
+                image,
+                height: 124,
+              ),
+              Text(
+                tile,
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
+              ),
+              Row(
+                children: [
+                  Text("4.5",
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
+                  Icon(
+                    Icons.star,
+                    color: Colors.yellow,
+                  ),
+                  Spacer(),
+                  Text("1Km",
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
+                  Icon(
+                    Icons.location_on,
+                    color: Colors.green[400],
+                  )
+                ],
+              ),
+              Row(
+                children: [
+                  Icon(
+                    Icons.money,
+                    color: Colors.green[400],
+                  ),
+                  Spacer(),
+                  Text("300.000/h",
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.w500))
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );
