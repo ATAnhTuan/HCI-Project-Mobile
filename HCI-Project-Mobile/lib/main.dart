@@ -1,10 +1,8 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'Home/HomeScreen.dart';
+import 'package:flutter_application_1/Screen/Setting/SettingScreen.dart';
+import 'Screen/Home/HomeScreen.dart';
 import 'package:material_color_utilities/material_color_utilities.dart';
-
-import 'Login/LoginScreen.dart';
-import 'Setting/SettingScreen.dart';
 
 void main() {
   runApp(const SettingWidget());

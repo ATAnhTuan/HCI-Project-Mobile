@@ -24,7 +24,7 @@ class SettingWidget extends StatelessWidget {
           elevation: 0,
         ),
         body: Padding(
-          padding: const EdgeInsets.all(10),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           child: ListView(
             children: [
               BigUserCard(
@@ -38,8 +38,8 @@ class SettingWidget extends StatelessWidget {
                     borderRadius: 50,
                     backgroundColor: Colors.yellow[600],
                   ),
-                  title: "Chỉnh sửa",
-                  subtitle: "Nhấn vào để chỉnh sửa hồ sơ",
+                  title: "Chỉnh sửa hồ sơ",
+                  subtitle: "Xem chi tiết",
                   onTap: () {},
                 ),
               ),
@@ -135,7 +135,7 @@ class SettingWidget extends StatelessWidget {
                       backgroundColor: Colors.white,
                     ),
                     title: "Về chúng tôi",
-                    subtitle: "HCI201_SU22_Group2",
+                    subtitle: "Xem chi tiết",
                   ),
                   SettingsItem(
                     onTap: () {},
@@ -146,7 +146,7 @@ class SettingWidget extends StatelessWidget {
                       backgroundColor: Colors.white,
                     ),
                     title: "Câu hỏi thường gặp",
-                    subtitle: "Đặt câu hỏi cho chúng tôi",
+                    subtitle: "Xem chi tiết",
                   ),
                   SettingsItem(
                     onTap: () {},
@@ -156,8 +156,8 @@ class SettingWidget extends StatelessWidget {
                       withBackground: true,
                       backgroundColor: Colors.white,
                     ),
-                    title: "Hotline",
-                    subtitle: "0912345678",
+                    title: "Liên hệ với chúng tôi",
+                    subtitle: "Xem chi tiết",
                   ),
                 ],
               ),
