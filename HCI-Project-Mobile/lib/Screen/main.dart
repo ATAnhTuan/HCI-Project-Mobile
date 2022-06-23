@@ -4,13 +4,11 @@ import 'Home/HomeScreen.dart';
 import 'package:material_color_utilities/material_color_utilities.dart';
 
 import 'Login/LoginScreen.dart';
-
-
+import 'Setting/SettingScreen.dart';
 
 void main() {
-  runApp(const LoginScreen());
+  runApp(const SettingWidget());
 }
-
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -36,7 +34,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-   HomeScreen(),
+    HomeScreen(),
     Text(
       'Index 1: Chat',
       style: optionStyle,
@@ -56,6 +54,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       _selectedIndex = index;
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
