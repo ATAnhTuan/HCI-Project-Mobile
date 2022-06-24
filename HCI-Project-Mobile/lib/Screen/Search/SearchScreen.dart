@@ -2,14 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Screen/Home/HomeScreen.dart';
 
 class SearchScreen extends StatelessWidget{
-  static String routeName ="/search";
+  const SearchScreen({Key? key}) : super(key: key);
+  // static String routeName ="/search";
   @override
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-            "SearchScreen",
-            style: TextStyle(color: Color(0xFF8D8D8D)),
+        backgroundColor: Colors.green[400],
+        title: Center(
+          child: Text(
+              "SearchScreen",
+              style: TextStyle(color: Colors.white,
+              fontSize: 25,
+              fontWeight: FontWeight.w700
+              ),
+          ),
         ),
         actions: [IconButton(
           icon: const Icon(Icons.search),
