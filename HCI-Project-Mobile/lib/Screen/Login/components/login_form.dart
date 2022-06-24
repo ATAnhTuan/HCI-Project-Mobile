@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Screen/Home/BottomBar.dart';
+import 'package:flutter_application_1/Screen/Login/LoginSuccess.dart';
 import '../../../components/already_have_an_account_acheck.dart';
 import '../../../components/constants.dart';
 import '../../Home/HomeScreen.dart';
 import '../../Signup/SignupScreen.dart';
+import '../../Home/BottomBar.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({
@@ -50,7 +53,7 @@ class LoginForm extends StatelessWidget {
                 backgroundColor: MaterialStateProperty.all(Colors.green),),
               onPressed: () {Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const HomeScreen()),
+                MaterialPageRoute(builder: (context) =>  LoginSuccess()),
               );},
               child: Text(
                 "Đăng nhập".toUpperCase(),

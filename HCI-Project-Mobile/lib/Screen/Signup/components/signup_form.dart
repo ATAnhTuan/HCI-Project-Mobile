@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Screen/Signup/SignUpSuccess.dart';
 import '../../../components/already_have_an_account_acheck.dart';
 import '../../../components/constants.dart';
 import '../../Home/HomeScreen.dart';
 import '../../Login/LoginScreen.dart';
+import '../../Signup/SignUpSuccess.dart';
 
 class SignUpForm extends StatelessWidget {
   const SignUpForm({
@@ -48,7 +50,7 @@ class SignUpForm extends StatelessWidget {
                 backgroundColor: MaterialStateProperty.all(Colors.green),),
             onPressed: () {Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const HomeScreen()),
+              MaterialPageRoute(builder: (context) =>  SignUpSuccess()),
             );},
             child: Text("Đăng ký".toUpperCase()),
           ),

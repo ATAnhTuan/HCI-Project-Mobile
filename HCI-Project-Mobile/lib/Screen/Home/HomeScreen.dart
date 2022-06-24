@@ -21,20 +21,20 @@ class HomeScreen extends StatelessWidget {
               color: Colors.green[400],
               child: Row(
                 children: [
-                  IconButton(onPressed: () {}, icon: Icon(Icons.notifications)),
+                  IconButton(onPressed: () {}, icon: Icon(Icons.notifications), color: Colors.white,),
                   Spacer(),
                   Text(
                     "Trang Chủ",
                     style: TextStyle(
                         fontSize: 25,
-                        color: Colors.black,
+                        color: Colors.white,
                         fontWeight: FontWeight.w700),
                   ),
                   Spacer(),
                   IconButton(onPressed: () {
                     Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const SettingWidget()));
-                  }, icon: Icon(Icons.menu)),
+                  }, icon: Icon(Icons.menu) , color: Colors.white,),
                 ],
               ),
             ),
