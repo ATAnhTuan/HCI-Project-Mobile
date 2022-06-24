@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Screen/profile/profile.dart';
 import 'HomeScreen.dart';
 
 
@@ -23,10 +24,7 @@ class _MyStatefulWidgetState extends State<BottomBar> {
       'Index 2: Search',
       style: optionStyle,
     ),
-    Text(
-      'Index 3: Profile',
-      style: optionStyle,
-    )
+   Profile()
   ];
 
   void _onItemTapped(int index) {
