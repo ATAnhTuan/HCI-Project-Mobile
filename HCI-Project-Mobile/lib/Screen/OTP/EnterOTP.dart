@@ -1,5 +1,8 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Screen/ChangePassword/ChangePasswordScreen.dart';
+import 'package:pin_entry_text_field/pin_entry_text_field.dart';
 
 class EnterOTP extends StatelessWidget{
   @override
@@ -19,7 +22,7 @@ class EnterOTP extends StatelessWidget{
             const Spacer(),
             Expanded(
               flex:5,
-              child: Image.asset("assets/images/Enter OTP-pana.png"),
+              child: Image.asset("assets/images/Enter OTP-bro.png"),
             ),
             const Spacer(),
           ],
@@ -53,13 +56,10 @@ class EnterOTP extends StatelessWidget{
           SizedBox(
             width: 350,
 
-            child: TextField(
-              obscureText: true,
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                prefixIcon: Icon(Icons.phone),
-                labelText: 'Enter OTP here',
-              ),
+            child: PinEntryTextField(
+              showFieldAsBox: true,
+              onSubmit:(String pin){
+              }
             ),
           ),
           Text(""),

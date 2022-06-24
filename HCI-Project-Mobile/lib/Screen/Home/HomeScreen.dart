@@ -283,9 +283,10 @@ class ItemSale extends StatelessWidget {
                     color: Colors.green[400],
                   ),
                   Spacer(),
-                  Text("250.000"
+                  Text("250.000/h"
                   ,style: TextStyle(
-                    color: Colors.red
+                    color: Colors.red,
+                      fontWeight: FontWeight.bold,
                   ),
                   ),
                   Spacer(),

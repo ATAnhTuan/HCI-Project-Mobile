@@ -59,8 +59,8 @@ class ChangePassword extends StatelessWidget{
               obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
-                prefixIcon: Icon(Icons.password),
-                labelText: '************',
+                prefixIcon: Icon(Icons.lock_outline),
+                labelText: '******',
               ),
             ),
           ),
@@ -78,10 +78,19 @@ class ChangePassword extends StatelessWidget{
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => LoginScreen()),
+
+
+                  );
+                  showDialog(context: context, builder: (context){
+                    return AlertDialog(title: Text("Xác nhận" ),
+                      content: Text("Thay đổi mật khẩu thành công"),
+                    );
+                  }
                   );
                 },
                 child: Text(
                   "Xác nhận".toUpperCase(),
+
                 ),
               ),
             ),

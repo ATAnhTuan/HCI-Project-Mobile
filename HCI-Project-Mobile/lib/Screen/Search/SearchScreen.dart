@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Screen/Home/HomeScreen.dart';
 
 class SearchScreen extends StatelessWidget{
   const SearchScreen({Key? key}) : super(key: key);
@@ -8,10 +7,10 @@ class SearchScreen extends StatelessWidget{
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green[400],
+        backgroundColor: Colors.green[500],
         title: Center(
           child: Text(
-              "SearchScreen",
+              "Tìm kiếm",
               style: TextStyle(color: Colors.white,
               fontSize: 25,
               fontWeight: FontWeight.w700
