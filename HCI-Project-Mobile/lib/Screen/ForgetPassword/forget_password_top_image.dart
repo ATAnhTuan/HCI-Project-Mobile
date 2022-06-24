@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../components/constants.dart';
 
 
-class LoginScreenTopImage extends StatelessWidget {
-  const LoginScreenTopImage({
+class ForgetPasswordTopImage extends StatelessWidget {
+  const ForgetPasswordTopImage({
     Key? key,
   }) : super(key: key);
 
@@ -16,21 +16,20 @@ class LoginScreenTopImage extends StatelessWidget {
           children: [
             const Spacer(),
             Expanded(
-              flex:5,
-              child: Image.asset("assets/images/login.png"),
+              flex:30,
+              child: Image.asset("assets/images/quenmatkhau.png"),
             ),
-            const Spacer(),
           ],
         ),
-        Padding(
-          padding: EdgeInsets.only(left: 25),
-          child: Row(
-            children: [
+        Align(
+          alignment: Alignment.topLeft,
+          child: Container(
+            child:
               Text(
-                "Đăng nhập",
+                "Quên mật khẩu?",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
               ),
-            ],
+
           ),
         ),
         SizedBox(height: defaultPadding * 2),

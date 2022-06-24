@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Screen/Home/BottomBar.dart';
 
-import '../Home/HomeScreen.dart';
-
 class LoginSuccess extends StatelessWidget{
   static String routeName ="/login_success";
   @override
