@@ -45,14 +45,27 @@ class SignUpForm extends StatelessWidget {
             ),
           ),
           const SizedBox(height: defaultPadding / 2),
-          ElevatedButton(
-            style: ButtonStyle(
+          Column(
+            children: [ ElevatedButton(
+              style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(Colors.green),),
-            onPressed: () {Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) =>  SignUpSuccess()),
-            );},
-            child: Text("Đăng ký".toUpperCase()),
+              onPressed: () {Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>  SignUpSuccess()),
+              );},
+              child: Text("Đăng ký".toUpperCase()),
+            ),
+
+              FloatingActionButton.extended(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpSuccess())
+              );}, icon: Image.asset(
+                'assets/images/google_logo.png',
+                height: 20,
+                width: 20,
+              ),
+                label:
+                Text("Đăng ky voi google".toUpperCase()),
+                backgroundColor: Colors.white,
+                foregroundColor: Colors.black,)],
           ),
           const SizedBox(height: defaultPadding),
           AlreadyHaveAnAccountCheck(
@@ -67,8 +80,12 @@ class SignUpForm extends StatelessWidget {
                 ),
               );
             },
+
           ),
+
+
         ],
+
       ),
     );
   }
