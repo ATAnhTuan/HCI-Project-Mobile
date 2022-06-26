@@ -1,11 +1,12 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Screen/Profile/ProfileScreen.dart';
 import 'package:flutter_application_1/Screen/Setting/SettingScreen.dart';
 import 'Screen/Home/HomeScreen.dart';
 import 'package:material_color_utilities/material_color_utilities.dart';
 
 void main() {
-  runApp(const SettingWidget());
+  runApp(const ProfileScreen());
 }
 
 class MyApp extends StatelessWidget {
