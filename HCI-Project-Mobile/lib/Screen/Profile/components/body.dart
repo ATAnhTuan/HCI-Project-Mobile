@@ -12,6 +12,8 @@ class Body extends StatelessWidget {
         children: [
           ProfilePic(),
           SizedBox(height: 20),
+          buildname(),
+          SizedBox(height: 20),
           ProfileMenu(
             text: "Xem hồ sơ",
             icon: "assets/icons/User.svg",
@@ -39,6 +41,22 @@ class Body extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+
+  Widget buildname() {
+    return Column(
+      children: [
+        Text(
+          "Trần Gia Hoàng",
+          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+        ),
+        SizedBox(height: 5),
+        Text(
+          "hoangtgse@gmail.com",
+          style: TextStyle(color: Colors.grey),
+        ),
+      ],
     );
   }
 }

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Screen/profile/ProfireScreen.dart';
 import 'HomeScreen.dart';
 import 'package:flutter_application_1/Screen/Search/SearchScreen.dart';
-
 
 class BottomBar extends StatefulWidget {
   const BottomBar({Key? key}) : super(key: key);
@@ -16,15 +14,12 @@ class _MyStatefulWidgetState extends State<BottomBar> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-   HomeScreen(),
+    HomeScreen(),
     Text(
       'Index 1: Chat',
       style: optionStyle,
-    )
-    ,
-    SearchScreen()
-    ,
-   ProfileScreen()
+    ),
+    SearchScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -32,6 +27,7 @@ class _MyStatefulWidgetState extends State<BottomBar> {
       _selectedIndex = index;
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
