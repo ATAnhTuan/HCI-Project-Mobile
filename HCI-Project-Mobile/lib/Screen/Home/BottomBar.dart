@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Screen/profile/ProfireScreen.dart';
 import 'HomeScreen.dart';
+import 'package:flutter_application_1/Screen/Search/SearchScreen.dart';
 
 
 class BottomBar extends StatefulWidget {
@@ -18,15 +20,11 @@ class _MyStatefulWidgetState extends State<BottomBar> {
     Text(
       'Index 1: Chat',
       style: optionStyle,
-    ),
-    Text(
-      'Index 2: Search',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 3: Profile',
-      style: optionStyle,
     )
+    ,
+    SearchScreen()
+    ,
+   ProfileScreen()
   ];
 
   void _onItemTapped(int index) {
@@ -42,7 +40,7 @@ class _MyStatefulWidgetState extends State<BottomBar> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.green[400],
+        backgroundColor: Colors.green,
         unselectedItemColor: Colors.black,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(

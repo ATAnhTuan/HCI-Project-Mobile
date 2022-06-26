@@ -1,29 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Screen/Home/HomeScreen.dart';
+import '../../Screen/Home/BottomBar.dart';
 
 class SignUpSuccess extends StatelessWidget{
   static String routeName ="/signup_success";
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      appBar: AppBar(
-        leading: SizedBox(),
-        title: Center(
-          child: Text(
-            "",
-            style: TextStyle(color: Color(0xFF8D8D8D)),
-          ),
-        ),
-      ),
-        body: Column(
-          children: [
 
-            Image.asset("assets/imgaes/welcome.png"
+        body: Column(
+
+          children: [
+            Spacer(),
+            Image.asset("assets/images/welcome.png"
             ),
 
-            Text("Sign Up Successful",style: TextStyle(
+            Text("Đăng ký thành công",style: TextStyle(
               fontWeight: FontWeight.bold,
-              color: Colors.green,
+              color: Colors.green, fontSize: 25
             ),
             ),
             Spacer(),
@@ -34,7 +27,7 @@ class SignUpSuccess extends StatelessWidget{
                   backgroundColor: MaterialStateProperty.all(Colors.green),),
                 onPressed: () { Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const HomeScreen()),
+                  MaterialPageRoute(builder: (context) => const BottomBar()),
                 );},
                 child: Text(
                   "Đến trang chủ".toUpperCase(),

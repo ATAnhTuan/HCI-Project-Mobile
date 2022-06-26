@@ -30,11 +30,19 @@ dependencies:
   flutter:
     sdk: flutter
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> aae25a0abd563585fcd5caef7d830da755714b19
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   flutter_svg: ^1.1.0
   babstrap_settings_screen: ^0.1.3
+  otp_screen: ^0.0.3
+  pin_entry_text_field: ^0.1.3
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
