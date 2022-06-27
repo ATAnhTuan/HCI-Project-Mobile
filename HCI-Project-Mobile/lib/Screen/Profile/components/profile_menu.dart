@@ -21,7 +21,7 @@ class ProfileMenu extends StatelessWidget {
           primary: Colors.green[400],
           padding: EdgeInsets.all(20),
           shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
           backgroundColor: Color(0xFFF5F6F9),
         ),
         onPressed: press,
@@ -36,7 +36,7 @@ class ProfileMenu extends StatelessWidget {
             Expanded(
               child: Text(
                 text,
-                style: TextStyle(fontWeight: FontWeight.normal),
+                style: TextStyle(fontWeight: FontWeight.w500),
               ),
             ),
             Icon(Icons.arrow_forward_ios_rounded),
