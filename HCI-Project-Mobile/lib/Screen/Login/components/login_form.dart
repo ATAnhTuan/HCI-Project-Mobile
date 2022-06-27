@@ -3,11 +3,7 @@ import 'package:flutter_application_1/Screen/Login/LoginSuccess.dart';
 import 'package:flutter_application_1/components/forget_password.dart';
 import '../../../components/already_have_an_account_acheck.dart';
 import '../../../components/constants.dart';
-<<<<<<< HEAD
-import '../../Home/BottomBar.dart';
-=======
 import '../../ForgetPassword/ForgetPasswordScreen.dart';
->>>>>>> 5a0eea09d89d8400efc5c19a5600171c6b4206ba
 import '../../Signup/SignupScreen.dart';
 
 class LoginForm extends StatelessWidget {
@@ -38,22 +34,6 @@ class LoginForm extends StatelessWidget {
             ),
           ),
           const SizedBox(height: defaultPadding),
-<<<<<<< HEAD
-          Hero(
-            tag: "login_btn",
-            child: ElevatedButton(
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.green),),
-              onPressed: () 
-              {
-              //   Navigator.push(
-              //   context,
-              //   MaterialPageRoute(builder: (context) => const BottomBar()),
-              // );
-              },
-              child: Text(
-                "Đăng nhập".toUpperCase(),
-=======
           ForgetPasswordCheck(
             press: () {
               Navigator.push(
@@ -89,7 +69,6 @@ class LoginForm extends StatelessWidget {
                     ),
                   ),
                 ),
->>>>>>> 5a0eea09d89d8400efc5c19a5600171c6b4206ba
               ),
               Text(""),
               Text(

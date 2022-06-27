@@ -13,86 +13,60 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      body: Container(
-<<<<<<< HEAD
-          padding: const EdgeInsets.only(top: 25),
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                Container(
-                  color: Colors.green[400],
-                  child: Row(
-                    children: [
-                      IconButton(
-                          onPressed: () {}, icon: Icon(Icons.notifications)),
-                      Spacer(),
-                      Text(
-                        "Trang Chủ",
-                        style: TextStyle(
-                            fontSize: 25,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w700),
-                      ),
-                      Spacer(),
-                      IconButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        const SettingWidget()));
-                          },
-                          icon: Icon(Icons.menu)),
-                    ],
-                  ),
+        body: Container(
+            padding: const EdgeInsets.only(top: 25),
+            child: SingleChildScrollView(
+                child: Column(children: [
+              Container(
+                color: Colors.green[400],
+                child: Row(
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: Icon(Icons.notifications),
+                      color: Colors.white,
+                    ),
+                    Spacer(),
+                    Text(
+                      "Trang Chủ",
+                      style: TextStyle(
+                          fontSize: 25,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w700),
+                    ),
+                    Spacer(),
+                    IconButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const SettingWidget()));
+                      },
+                      icon: Icon(Icons.menu),
+                      color: Colors.white,
+                    ),
+                  ],
                 ),
-                ItemTitle(title: "Sân Có Sẵn"),
-                List2Items(
-                    title1: "Sân Thủ Đức",
-                    image1: "assets/images/thuduc.png",
-                    title2: "Sân Quận 9",
-                    image2: "assets/images/quan9.jpg"),
-                ItemTitle(title: "Nhiều Người Yêu Thích"),
-                List2Items(
-                    title1: "Sân Gò Vấp",
-                    image1: "assets/images/govap.jpg",
-                    title2: "Sân Quận 2",
-                    image2: "assets/images/quan2.jpg"),
-                ItemTitle(title: "Sân Đang Giảm Giá"),
-                List2ItemsSale(
-                    title1: "Sân Quận 5",
-                    image1: "assets/images/quan5.jpg",
-                    title2: "Sân Quận 4",
-                    image2: "assets/images/quan4.jpg"),
-              ],
-=======
-        padding: const EdgeInsets.only(top: 25),
-        child: SingleChildScrollView(child: Column(
-          children: [
-            Container(
-              color: Colors.green[400],
-              child: Row(
-                children: [
-                  IconButton(onPressed: () {}, icon: Icon(Icons.notifications), color: Colors.white,),
-                  Spacer(),
-                  Text(
-                    "Trang Chủ",
-                    style: TextStyle(
-                        fontSize: 25,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w700),
-                  ),
-                  Spacer(),
-                  IconButton(onPressed: () {
-                    Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const SettingWidget()));
-                  }, icon: Icon(Icons.menu) , color: Colors.white,),
-                ],
               ),
->>>>>>> 5a0eea09d89d8400efc5c19a5600171c6b4206ba
-            ),
-          )),
-    );
+              ItemTitle(title: "Sân Có Sẵn"),
+              List2Items(
+                  title1: "Sân Thủ Đức",
+                  title2: "Sân Quận 9",
+                  image1: "assets/images/thuduc.png",
+                  image2: "assets/images/quan9.jpg"),
+              ItemTitle(title: "Sân Nhiều Người Yêu Thích"),
+              List2Items(
+                  title1: "Sân Quận 2",
+                  title2: "Sân Quận 4",
+                  image1: "assets/images/quan2.jpg",
+                  image2: "assets/images/quan4.jpg"),
+              ItemTitle(title: "Sân Khuyến Mãi"),
+              List2ItemsSale(
+                  title1: "Sân Quận 1",
+                  title2: "Sân Quận 7",
+                  image1: "assets/images/quan7.jpg",
+                  image2: "assets/images/quan1.jpg"),
+            ]))));
   }
 }
 
@@ -314,17 +288,12 @@ class ItemSale extends StatelessWidget {
                     color: Colors.green[400],
                   ),
                   Spacer(),
-<<<<<<< HEAD
                   Text(
-                    "250.000",
-                    style: TextStyle(color: Colors.red),
-=======
-                  Text("250.000/h"
-                  ,style: TextStyle(
-                    color: Colors.red,
+                    "250.000/h",
+                    style: TextStyle(
+                      color: Colors.red,
                       fontWeight: FontWeight.bold,
-                  ),
->>>>>>> 5a0eea09d89d8400efc5c19a5600171c6b4206ba
+                    ),
                   ),
                   Spacer(),
                   Text("300.000/h",

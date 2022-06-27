@@ -50,20 +50,6 @@ class SignUpForm extends StatelessWidget {
             children: [ ElevatedButton(
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(Colors.green),),
-<<<<<<< HEAD
-            onPressed: () {
-              // BottomBar();
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(
-              //     builder: (context) {
-              //       return BottomBar();
-              //     },
-              //   ),
-              // );
-            },
-            child: Text("Đăng ký".toUpperCase()),
-=======
               onPressed: () {Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) =>  SignUpSuccess()),
@@ -81,7 +67,6 @@ class SignUpForm extends StatelessWidget {
                 Text("Đăng ky voi google".toUpperCase()),
                 backgroundColor: Colors.white,
                 foregroundColor: Colors.black,)],
->>>>>>> 5a0eea09d89d8400efc5c19a5600171c6b4206ba
           ),
           const SizedBox(height: defaultPadding),
           AlreadyHaveAnAccountCheck(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../Profile/ProfileScreen.dart';
 import 'HomeScreen.dart';
 import 'package:flutter_application_1/Screen/Search/SearchScreen.dart';
 import '../../Screen/Chat/ChatList.dart';
@@ -15,7 +16,6 @@ class _MyStatefulWidgetState extends State<BottomBar> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-<<<<<<< HEAD
    HomeScreen()
    ,
     ChatList()
@@ -23,14 +23,6 @@ class _MyStatefulWidgetState extends State<BottomBar> {
     SearchScreen()
     ,
    ProfileScreen()
-=======
-    HomeScreen(),
-    Text(
-      'Index 1: Chat',
-      style: optionStyle,
-    ),
-    SearchScreen(),
->>>>>>> 5a0eea09d89d8400efc5c19a5600171c6b4206ba
   ];
 
   void _onItemTapped(int index) {
