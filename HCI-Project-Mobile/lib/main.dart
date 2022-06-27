@@ -1,36 +1,51 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'HomeScreen.dart';
-import 'package:flutter_application_1/Screen/Search/SearchScreen.dart';
-import '../../Screen/Chat/ChatList.dart';
+import 'package:flutter_application_1/Screen/Profile/ProfileScreen.dart';
+import 'package:flutter_application_1/Screen/Setting/SettingScreen.dart';
+import 'Screen/Home/HomeScreen.dart';
+import 'package:material_color_utilities/material_color_utilities.dart';
 
-class BottomBar extends StatefulWidget {
-  const BottomBar({Key? key}) : super(key: key);
-
-  @override
-  State<BottomBar> createState() => _MyStatefulWidgetState();
+void main() {
+  runApp(const ProfileScreen());
 }
 
-class _MyStatefulWidgetState extends State<BottomBar> {
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: MyStatefulWidget(),
+    );
+  }
+}
+
+class MyStatefulWidget extends StatefulWidget {
+  const MyStatefulWidget({Key? key}) : super(key: key);
+
+  @override
+  State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
+}
+
+class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-<<<<<<< HEAD
-   HomeScreen()
-   ,
-    ChatList()
-    ,
-    SearchScreen()
-    ,
-   ProfileScreen()
-=======
     HomeScreen(),
     Text(
       'Index 1: Chat',
       style: optionStyle,
     ),
-    SearchScreen(),
->>>>>>> 5a0eea09d89d8400efc5c19a5600171c6b4206ba
+    Text(
+      'Index 2: Search',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 3: Profile',
+      style: optionStyle,
+    )
   ];
 
   void _onItemTapped(int index) {
@@ -47,8 +62,8 @@ class _MyStatefulWidgetState extends State<BottomBar> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.green,
-        unselectedItemColor: Colors.black,
+        backgroundColor: Colors.green[400],
+        unselectedItemColor: Colors.white,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home_outlined),
@@ -63,7 +78,7 @@ class _MyStatefulWidgetState extends State<BottomBar> {
             label: 'Tìm kiếm',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_box_rounded),
+            icon: Icon(Icons.person_outlined),
             label: 'Thông Tin',
           )
         ],

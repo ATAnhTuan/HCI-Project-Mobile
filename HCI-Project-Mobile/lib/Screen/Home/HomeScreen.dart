@@ -14,6 +14,7 @@ class HomeScreen extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
+<<<<<<< HEAD
           padding: const EdgeInsets.only(top: 25),
           child: SingleChildScrollView(
             child: Column(
@@ -64,6 +65,31 @@ class HomeScreen extends StatelessWidget {
                     title2: "Sân Quận 4",
                     image2: "assets/images/quan4.jpg"),
               ],
+=======
+        padding: const EdgeInsets.only(top: 25),
+        child: SingleChildScrollView(child: Column(
+          children: [
+            Container(
+              color: Colors.green[400],
+              child: Row(
+                children: [
+                  IconButton(onPressed: () {}, icon: Icon(Icons.notifications), color: Colors.white,),
+                  Spacer(),
+                  Text(
+                    "Trang Chủ",
+                    style: TextStyle(
+                        fontSize: 25,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w700),
+                  ),
+                  Spacer(),
+                  IconButton(onPressed: () {
+                    Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const SettingWidget()));
+                  }, icon: Icon(Icons.menu) , color: Colors.white,),
+                ],
+              ),
+>>>>>>> 5a0eea09d89d8400efc5c19a5600171c6b4206ba
             ),
           )),
     );
@@ -288,9 +314,17 @@ class ItemSale extends StatelessWidget {
                     color: Colors.green[400],
                   ),
                   Spacer(),
+<<<<<<< HEAD
                   Text(
                     "250.000",
                     style: TextStyle(color: Colors.red),
+=======
+                  Text("250.000/h"
+                  ,style: TextStyle(
+                    color: Colors.red,
+                      fontWeight: FontWeight.bold,
+                  ),
+>>>>>>> 5a0eea09d89d8400efc5c19a5600171c6b4206ba
                   ),
                   Spacer(),
                   Text("300.000/h",

@@ -1,13 +1,15 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Screen/Login/LoginScreen.dart';
+<<<<<<< HEAD
 import 'Home/HomeScreen.dart';
 import 'package:material_color_utilities/material_color_utilities.dart';
+=======
+>>>>>>> 5a0eea09d89d8400efc5c19a5600171c6b4206ba
 import 'Home/BottomBar.dart';
 
 
 void main() {
-  runApp(const MyApp());
+  runApp(const LoginScreen());
 }
 
 
