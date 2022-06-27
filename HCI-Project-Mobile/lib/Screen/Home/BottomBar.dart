@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Screen/profile/ProfireScreen.dart';
 import 'HomeScreen.dart';
 import 'package:flutter_application_1/Screen/Search/SearchScreen.dart';
+import '../../Screen/Chat/ChatList.dart';
 
 
 class BottomBar extends StatefulWidget {
@@ -16,11 +17,9 @@ class _MyStatefulWidgetState extends State<BottomBar> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-   HomeScreen(),
-    Text(
-      'Index 1: Chat',
-      style: optionStyle,
-    )
+   HomeScreen()
+   ,
+    ChatList()
     ,
     SearchScreen()
     ,

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../components/already_have_an_account_acheck.dart';
 import '../../../components/constants.dart';
 import '../../Home/HomeScreen.dart';
+import '../../Home/BottomBar.dart';
 import '../../Login/LoginScreen.dart';
 
 class SignUpForm extends StatelessWidget {
@@ -46,10 +47,17 @@ class SignUpForm extends StatelessWidget {
           ElevatedButton(
             style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(Colors.green),),
-            onPressed: () {Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const HomeScreen()),
-            );},
+            onPressed: () {
+              // BottomBar();
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(
+              //     builder: (context) {
+              //       return BottomBar();
+              //     },
+              //   ),
+              // );
+            },
             child: Text("Đăng ký".toUpperCase()),
           ),
           const SizedBox(height: defaultPadding),
