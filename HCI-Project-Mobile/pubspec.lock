@@ -96,7 +96,11 @@ packages:
     source: hosted
     version: "6.0.1"
   intl:
+<<<<<<< HEAD
     dependency: transitive
+=======
+    dependency: "direct main"
+>>>>>>> 1736f7f655067c450ffdce169fcfee0ff6c60a40
     description:
       name: intl
       url: "https://pub.dartlang.org"
@@ -165,6 +169,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "5.0.0"
+  pin_entry_field:
+    dependency: "direct main"
+    description:
+      name: pin_entry_field
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.4"
   pin_entry_text_field:
     dependency: "direct main"
     description:
@@ -172,6 +183,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.1.4"
+<<<<<<< HEAD
   simple_gesture_detector:
     dependency: transitive
     description:
@@ -179,6 +191,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.2.0"
+=======
+  settings_ui:
+    dependency: "direct main"
+    description:
+      name: settings_ui
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.2"
+>>>>>>> 1736f7f655067c450ffdce169fcfee0ff6c60a40
   sky_engine:
     dependency: transitive
     description: flutter
