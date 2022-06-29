@@ -31,7 +31,7 @@ class Body extends StatelessWidget {
                     UserDetails(
                       icon: Icons.email_rounded,
                       labelText: "Email",
-                      placeholder: "hoangtgse@gmail.com",
+                      placeholder: "hoangtgse140280@gmail.com",
                       isBirthDay: false,
                     ),
                     UserDetails(

@@ -16,7 +16,7 @@ class Body extends StatelessWidget {
           buildname(),
           SizedBox(height: 20),
           ProfileMenu(
-            text: "Xem hồ sơ",
+            text: "Chỉnh sửa hồ sơ",
             icon: "assets/icons/User.svg",
             press: () {
                 Navigator.push(
@@ -64,7 +64,7 @@ class Body extends StatelessWidget {
         ),
         SizedBox(height: 5),
         Text(
-          "hoangtgse@gmail.com",
+          "hoangtgse140280@gmail.com",
           style: TextStyle(color: Colors.grey),
         ),
       ],

@@ -28,7 +28,7 @@ class ProfileScreen extends StatelessWidget {
       centerTitle: true,
       title: Text("Hồ sơ"),
       actions: <Widget>[
-        TextButton(
+      /*  TextButton(
           onPressed: () {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const UserScreen()));
@@ -41,7 +41,7 @@ class ProfileScreen extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-        ),
+        ),*/
       ],
     );
   }

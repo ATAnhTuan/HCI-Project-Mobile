@@ -25,7 +25,7 @@ class UserPic extends StatelessWidget {
               image: DecorationImage(
                 fit: BoxFit.cover,
                 image: AssetImage(
-                  "assets/images/profilepic1.jpg",
+                  "assets/images/anhtuan.jpg",
                 ),
               ),
             ),
