@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import '../../setting/SettingScreen.dart';
 import 'profile_menu.dart';
 import 'profile_pic.dart';
 
@@ -27,7 +27,12 @@ class Body extends StatelessWidget {
           ProfileMenu(
             text: "Cài đặt",
             icon: "assets/icons/Settings.svg",
-            press: () {},
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const SettingWidget()),
+              );
+            },
           ),
           ProfileMenu(
             text: "Trung tâm trợ giúp khách hàng",

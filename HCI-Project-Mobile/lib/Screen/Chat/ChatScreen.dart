@@ -19,8 +19,19 @@ class ChatScreen extends StatelessWidget {
           UserItems(),
           Items(),
           UserItems(),
-          Items(),
-          UserItems()
+                  Expanded(
+          child: Align(
+            alignment: FractionalOffset.bottomCenter,
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: ("Your message here...")
+                ),
+              ),
+            ),
+          ),
+        ),
         ],
       )
     );
