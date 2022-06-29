@@ -3,7 +3,7 @@ import 'package:flutter_application_1/Screen/User/UserScreen.dart';
 import 'Screen/Home/BottomBar.dart';
 
 void main() {
-  runApp(const UserScreen());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {

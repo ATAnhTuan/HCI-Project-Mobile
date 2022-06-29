@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../setting/SettingScreen.dart';
 import 'profile_menu.dart';
 import 'profile_pic.dart';
+import '../../User/UserScreen.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -17,7 +18,12 @@ class Body extends StatelessWidget {
           ProfileMenu(
             text: "Xem hồ sơ",
             icon: "assets/icons/User.svg",
-            press: () {},
+            press: () {
+                Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const UserScreen()));
+            },
           ),
           ProfileMenu(
             text: "Lịch sử giao dịch",

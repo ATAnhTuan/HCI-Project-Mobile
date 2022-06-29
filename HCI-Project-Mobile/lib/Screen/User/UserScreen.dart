@@ -8,17 +8,20 @@ class UserScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: buildAppBar(),
+        appBar: buildAppBar(context),
         body: Body(),
       ),
     );
   }
 
-  AppBar buildAppBar() {
+  AppBar buildAppBar(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.green[400],
-      leading: Icon(Icons.arrow_back),
+      leading:IconButton(icon:  Icon(Icons.arrow_back,),onPressed: (){
+        Navigator.pop(context);
+      }),
       // On Android it's false by default
       centerTitle: true,
       title: Text("Chỉnh sửa hồ sơ"),

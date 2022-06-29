@@ -1,5 +1,6 @@
 import 'package:babstrap_settings_screen/babstrap_settings_screen.dart';
 import 'package:flutter/material.dart';
+import '../../Screen/User/UserScreen.dart';
 
 class SettingWidget extends StatelessWidget {
   const SettingWidget({Key? key}) : super(key: key);
@@ -43,7 +44,13 @@ class SettingWidget extends StatelessWidget {
                   ),
                   title: "Chỉnh sửa hồ sơ",
                   subtitle: "Xem chi tiết",
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const UserScreen()));
+                    
+                  },
                 ),
               ),
               SettingsGroup(
