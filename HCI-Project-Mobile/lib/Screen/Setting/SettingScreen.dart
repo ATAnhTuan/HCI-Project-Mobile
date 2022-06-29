@@ -36,7 +36,7 @@ class SettingWidget extends StatelessWidget {
               BigUserCard(
                 cardColor: Colors.green,
                 userName: "Trần Gia Hoàng",
-                userProfilePic: AssetImage("assets/images/profilepic1.jpg"),
+                userProfilePic: AssetImage("assets/images/hoangtran.jpg"),
                 cardActionWidget: SettingsItem(
                   icons: Icons.edit,
                   iconStyle: IconStyle(
