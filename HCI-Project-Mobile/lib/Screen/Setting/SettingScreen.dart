@@ -1,5 +1,7 @@
 import 'package:babstrap_settings_screen/babstrap_settings_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Screen/setting/Lichsu.dart';
+import 'package:flutter_application_1/Screen/setting/Yeuthich.dart';
 import '../../Screen/User/UserScreen.dart';
 
 class SettingWidget extends StatelessWidget {
@@ -46,10 +48,9 @@ class SettingWidget extends StatelessWidget {
                   subtitle: "Xem chi tiết",
                   onTap: () {
                     Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const UserScreen()));
-                    
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const UserScreen()));
                   },
                 ),
               ),
@@ -57,7 +58,12 @@ class SettingWidget extends StatelessWidget {
                 iconItemSize: 24.0,
                 items: [
                   SettingsItem(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Yeuthich()));
+                    },
                     icons: Icons.favorite,
                     iconStyle: IconStyle(
                       iconsColor: Colors.red,
@@ -68,7 +74,12 @@ class SettingWidget extends StatelessWidget {
                     subtitle: "Xem sân bạn đã thích",
                   ),
                   SettingsItem(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Lichsu()));
+                    },
                     icons: Icons.history,
                     iconStyle: IconStyle(
                       iconsColor: Colors.blue,
