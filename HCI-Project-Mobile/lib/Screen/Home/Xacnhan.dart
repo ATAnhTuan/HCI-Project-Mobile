@@ -50,7 +50,7 @@ class Xacnhan extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 20, top: 10, bottom: 10),
             child: Text(
-              "Thành Tiền 250.000 VND",
+              "Thành Tiền : 250.000 VND",
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
             ),
           ),
