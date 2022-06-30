@@ -18,7 +18,9 @@ class ForgetPasswordCheck extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Text(
-          login ? "                                                           " : "                           ",
+          login
+              ? "                                                "
+              : "                           ",
           style: const TextStyle(color: kPrimaryColor),
         ),
         GestureDetector(
@@ -26,10 +28,9 @@ class ForgetPasswordCheck extends StatelessWidget {
           child: Text(
             login ? "Quên mật khẩu?" : "Quên mật khẩu?",
             style: const TextStyle(
-
               color: kPrimaryColor,
               fontWeight: FontWeight.bold,
-              fontSize: 17,
+              fontSize: 16,
             ),
           ),
         )
