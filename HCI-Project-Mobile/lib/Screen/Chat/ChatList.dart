@@ -154,14 +154,27 @@ class ChatItem extends StatelessWidget {
                       fontSize: 20,
                     ),
                   ),
-                  Text("You: What's Man! . 9:40 AM ")
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        title,
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                        ),
+                      ),
+                      Spacer(),
+                      Column(
+                        children: const [
+                          Icon(Icons.check_circle_outline_rounded)
+                        ],
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
-            Spacer(),
-            Column(
-              children: const [Icon(Icons.check_circle_outline_rounded)],
-            )
           ],
         ),
       ),
