@@ -1,7 +1,9 @@
 import 'dart:math';
+import 'package:flutter_application_1/Screen/Home/Notification.dart';
 import 'package:flutter_application_1/Screen/setting/SettingScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Screen/Home/BottomBar.dart';
+import 'package:flutter_application_1/Screen/setting/Yeuthich.dart';
 import 'Santhuduc.dart';
 import 'BottomBar.dart';
 import 'package:flutter_application_1/Screen/Home/Santhuduc.dart';
@@ -22,7 +24,12 @@ class HomeScreen extends StatelessWidget {
                 child: Row(
                   children: [
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                         Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Notifi()));
+                      },
                       icon: Icon(Icons.notifications),
                       color: Colors.white,
                     ),
@@ -108,18 +115,29 @@ class ItemTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.only(left: 5, top: 5),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Text(
-            title,
-            style: TextStyle(
-              color: Colors.red,
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
+      child: Padding(
+        padding: const EdgeInsets.only(left: 10, right: 10),
+        child: Row(
+          children: [
+            Text(
+              title,
+              style: TextStyle(
+                color: Colors.red,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-          ),
-        ],
+            Spacer(),
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Yeuthich()));
+                },
+                child: Text("<<Xem Thêm>>"))
+          ],
+        ),
       ),
     );
   }

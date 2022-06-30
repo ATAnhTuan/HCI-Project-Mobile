@@ -9,8 +9,33 @@ class ChatScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.green[400],
         title: Text("Sân Quận 5"),
-        actions: <Widget>[
-          IconButton(onPressed: () {}, icon: Icon(Icons.settings))
+        actions: [
+          Padding(
+          padding: EdgeInsets.only(right: 16),
+          child: PopupMenuButton(
+            itemBuilder: (context) => [
+              PopupMenuItem(
+                onTap: () {},
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.delete_forever,
+                      color: Colors.black54,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 5),
+                      child: Text("Xóa Cuộc Trò Chuyện"),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+            child: Icon(
+              Icons.settings,
+              size: 24,
+            ),
+          ),
+        ),
         ],
       ),
       body: Column(

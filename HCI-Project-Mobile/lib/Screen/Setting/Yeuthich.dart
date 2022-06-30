@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Screen/Home/Santhuduc.dart';
 
 
 class Yeuthich extends StatelessWidget {
@@ -48,8 +49,8 @@ class ListItem extends StatelessWidget {
       padding: EdgeInsets.all(5),
       child: InkWell(
         onTap: () {
-          // Navigator.push(context,
-          //     MaterialPageRoute(builder: (context) => const FootballField()));
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const FootballField()));
         },
         child: Row(
           children: <Widget>[

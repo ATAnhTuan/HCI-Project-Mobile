@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Screen/Search/Searchresult.dart';
+import 'package:flutter_application_1/Screen/setting/Yeuthich.dart';
 import '../../Screen/Home/Santhuduc.dart';
 
 class SearchScreen extends StatelessWidget {
@@ -7,6 +9,7 @@ class SearchScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.green[500],
         title: Center(
           child: Text(
@@ -169,8 +172,12 @@ class MySearchDelegate extends SearchDelegate {
         return ListTile(
             title: Text(suggestion),
             onTap: () {
-              query = suggestion;
-              showResults(context);
+              // query = suggestion;
+              // showResults(context);
+                                Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Searchresult()));
             });
       },
     );

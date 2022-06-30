@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Screen/Chat/ChatScreen.dart';
+import 'package:flutter_application_1/Screen/Chat/Searchchat.dart';
 import '../../Screen/Home/BottomBar.dart';
 
 class ChatList extends StatelessWidget {
@@ -9,6 +10,7 @@ class ChatList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+          automaticallyImplyLeading: false,
           title: Text(
             "Tin Nhắn",
             style:
@@ -44,10 +46,6 @@ class ChatList extends StatelessWidget {
               image: 'assets/images/profilepic.jpg',
               title: "Sân Quân 8",
             ),
-<<<<<<< HEAD
-
-=======
->>>>>>> 38a38ca28ef98759653cbf04b37ae18d71c3e0db
           ],
         ),
       ),
@@ -107,8 +105,12 @@ class MySearchDelegate extends SearchDelegate {
         return ListTile(
             title: Text(suggestion),
             onTap: () {
-              query = suggestion;
-              showResults(context);
+              // query = suggestion;
+              // showResults(context);
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const Searchchat()));
             });
       },
     );
@@ -147,30 +149,16 @@ class ChatItem extends StatelessWidget {
                 ),
               ],
             ),
-<<<<<<< HEAD
-            Padding(
-              padding: const EdgeInsets.only(left:20, top: 10 ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    title,
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20,
-                    ),
-=======
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  title,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
->>>>>>> 38a38ca28ef98759653cbf04b37ae18d71c3e0db
-                  ),
-                  Text("You: What's Man! . 9:40 AM ")
-                ],
-              ),
+                Text(title,
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    )),
+                Text("You: What's Man! . 9:40 AM ")
+              ],
             ),
             Spacer(),
             Column(
