@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Screen/Login/LoginScreen.dart';
 import '../../setting/SettingScreen.dart';
 import 'profile_menu.dart';
 import 'profile_pic.dart';
@@ -48,7 +49,10 @@ class Body extends StatelessWidget {
           ProfileMenu(
             text: "Đăng xuất",
             icon: "assets/icons/Log out.svg",
-            press: () {},
+            press: () { Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const LoginScreen()),
+            );},
           ),
         ],
       ),

@@ -31,7 +31,7 @@ class SettingWidget extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           child: ListView(
             children: [
-              BigUserCard(
+            /*  BigUserCard(
                 cardColor: Colors.green,
                 userName: "Trần Gia Hoàng",
                 userProfilePic: AssetImage("assets/images/hoangtran.jpg"),
@@ -52,8 +52,9 @@ class SettingWidget extends StatelessWidget {
                     
                   },
                 ),
-              ),
+              ),*/
               SettingsGroup(
+                settingsGroupTitle: "Tiện ích",
                 iconItemSize: 24.0,
                 items: [
                   SettingsItem(

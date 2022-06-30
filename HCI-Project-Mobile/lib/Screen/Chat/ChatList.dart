@@ -28,22 +28,22 @@ class ChatList extends StatelessWidget {
         child: Column(
           children: [
             ChatItem(
-              image: 'assets/images/profilepic1.jpg',
+              image: 'assets/images/hoangtran.jpg',
               title: "Sân Quận 5",
             ),
             ChatItem(
-              image: 'assets/images/profilepic.jpg',
+              image: 'assets/images/anhtuan.jpg',
               title: "Sân Quân 4",
             ),
             ChatItem(
-              image: 'assets/images/profilepic1.jpg',
+              image: 'assets/images/phamtrung.jpg',
               title: "Sân Thủ Đức",
             ),
             ChatItem(
               image: 'assets/images/profilepic.jpg',
               title: "Sân Quân 8",
             ),
-            
+
           ],
         ),
       ),
@@ -145,16 +145,19 @@ class ChatItem extends StatelessWidget {
                 ),
               ],
             ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  title,
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20,
+            Padding(
+              padding: const EdgeInsets.only(left:20, top: 10 ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20,
+                    ),
                   ),
-                ),
-                Text("You: What's Man! . 9:40 AM ")
-              ],
+                  Text("You: What's Man! . 9:40 AM ")
+                ],
+              ),
             ),
             Spacer(),
             Column(
