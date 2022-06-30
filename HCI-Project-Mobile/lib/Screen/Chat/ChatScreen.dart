@@ -14,7 +14,7 @@ class ChatScreen extends StatelessWidget {
         ],
       ),
       body: Column(
-        children: [
+        children: const [
           Items(),
           UserItems(),
           Items(),
@@ -23,7 +23,7 @@ class ChatScreen extends StatelessWidget {
           child: Align(
             alignment: FractionalOffset.bottomCenter,
             child: Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: EdgeInsets.all(10.0),
               child: TextField(
                 decoration: InputDecoration(
                   hintText: ("Your message here...")

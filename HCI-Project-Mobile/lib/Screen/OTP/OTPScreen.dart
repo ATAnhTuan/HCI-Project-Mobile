@@ -27,7 +27,7 @@ class OTPScreen extends StatelessWidget{
           Padding(
             padding: EdgeInsets.only(left: 25),
             child: Row(
-              children: [
+              children: const [
                 Text(
                   "Nhập số điện thoại",
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
@@ -41,7 +41,7 @@ class OTPScreen extends StatelessWidget{
           Padding(
             padding: EdgeInsets.only(left: 25),
             child: Row(
-              children: [
+              children: const [
                 Text(
                   "Nhập số điện thoại của bạn để nhận mã OTP",
                   style: TextStyle(fontSize: 15),

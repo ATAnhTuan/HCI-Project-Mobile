@@ -1,4 +1,3 @@
-import '../../Screen/User/UserScreen.dart';
 
 import 'package:flutter/material.dart';
 
@@ -27,7 +26,7 @@ class ProfileScreen extends StatelessWidget {
       // On Android it's false by default
       centerTitle: true,
       title: Text("Hồ sơ"),
-      actions: <Widget>[
+      actions: const <Widget>[
       /*  TextButton(
           onPressed: () {
             Navigator.push(context,

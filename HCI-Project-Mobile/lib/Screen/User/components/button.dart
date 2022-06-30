@@ -35,13 +35,6 @@ class Button extends StatelessWidget {
             // ),
             OutlinedButton(
               onPressed: () {},
-              child: Text(
-                "Cập nhật",
-                style: TextStyle(
-                  color: Colors.white,
-                  letterSpacing: 2.2,
-                ),
-              ),
               style: OutlinedButton.styleFrom(
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15),
@@ -54,6 +47,13 @@ class Button extends StatelessWidget {
                 primary: Colors.blue,
                 side: BorderSide(width: 1, color: Colors.grey),
                 backgroundColor: Colors.green[400],
+              ),
+              child: Text(
+                "Cập nhật",
+                style: TextStyle(
+                  color: Colors.white,
+                  letterSpacing: 2.2,
+                ),
               ),
             ),
           ],

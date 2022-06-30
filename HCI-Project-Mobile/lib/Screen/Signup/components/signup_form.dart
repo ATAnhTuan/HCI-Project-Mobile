@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Screen/Signup/SignUpSuccess.dart';
 import '../../../components/already_have_an_account_acheck.dart';
 import '../../../components/constants.dart';
-import '../../Home/HomeScreen.dart';
-import '../../Home/BottomBar.dart';
 import '../../Login/LoginScreen.dart';
 import '../../Signup/SignUpSuccess.dart';
 
@@ -47,26 +45,34 @@ class SignUpForm extends StatelessWidget {
           ),
           const SizedBox(height: defaultPadding / 2),
           Column(
-            children: [ ElevatedButton(
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.green),),
-              onPressed: () {Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) =>  SignUpSuccess()),
-              );},
-              child: Text("Đăng ký".toUpperCase()),
-            ),
-
-              FloatingActionButton.extended(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpSuccess())
-              );}, icon: Image.asset(
-                'assets/images/google_logo.png',
-                height: 20,
-                width: 20,
+            children: [
+              ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.green),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SignUpSuccess()),
+                  );
+                },
+                child: Text("Đăng ký".toUpperCase()),
               ),
-                label:
-                Text("Đăng ky voi google".toUpperCase()),
+              FloatingActionButton.extended(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => SignUpSuccess()));
+                },
+                icon: Image.asset(
+                  'assets/images/google_logo.png',
+                  height: 20,
+                  width: 20,
+                ),
+                label: Text("Đăng ky voi google".toUpperCase()),
                 backgroundColor: Colors.white,
-                foregroundColor: Colors.black,)],
+                foregroundColor: Colors.black,
+              )
+            ],
           ),
           const SizedBox(height: defaultPadding),
           AlreadyHaveAnAccountCheck(
@@ -81,12 +87,8 @@ class SignUpForm extends StatelessWidget {
                 ),
               );
             },
-
           ),
-
-
         ],
-
       ),
     );
   }

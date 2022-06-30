@@ -1,9 +1,6 @@
-import 'dart:math';
 import 'package:flutter_application_1/Screen/setting/SettingScreen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Screen/Home/BottomBar.dart';
 import 'Santhuduc.dart';
-import 'BottomBar.dart';
 import 'package:flutter_application_1/Screen/Home/Santhuduc.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -82,7 +79,7 @@ class List2Items extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
         height: 230,
         child: Row(
           children: <Widget>[
@@ -212,7 +209,7 @@ class List2ItemsSale extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
         height: 230,
         child: Row(
           children: <Widget>[

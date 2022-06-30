@@ -14,7 +14,7 @@ class Chonsan extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(10),
           child: Column(
-            children: [
+            children: const [
                     List2Items(
                     title1: "Sân 1",
                     title2: "Sân 2",
@@ -48,7 +48,7 @@ class List2Items extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
         height: 230,
         child: Padding(
           padding: const EdgeInsets.only(top: 10,bottom: 10),

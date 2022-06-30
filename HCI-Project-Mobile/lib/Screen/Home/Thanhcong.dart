@@ -27,7 +27,7 @@ class Thanhcong extends StatelessWidget {
             ),
             Padding(
             padding: const EdgeInsets.only(left: 50, right: 20, top: 20),
-            child: Container(
+            child: SizedBox(
               width: 250,
               height: 45,
               child: ElevatedButton(

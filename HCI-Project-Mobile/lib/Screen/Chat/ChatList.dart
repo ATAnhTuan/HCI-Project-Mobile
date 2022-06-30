@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Screen/Chat/ChatScreen.dart';
-import '../../Screen/Home/BottomBar.dart';
 
 class ChatList extends StatelessWidget {
   const ChatList({Key? key}) : super(key: key);
@@ -27,7 +26,7 @@ class ChatList extends StatelessWidget {
           ]),
       body: Container(
         child: Column(
-          children: [
+          children: const [
             ChatItem(
               image: 'assets/images/hoangtran.jpg',
               title: "Sân Quận 5",
@@ -161,7 +160,7 @@ class ChatItem extends StatelessWidget {
             ),
             Spacer(),
             Column(
-              children: [Icon(Icons.check_circle_outline_rounded)],
+              children: const [Icon(Icons.check_circle_outline_rounded)],
             )
           ],
         ),

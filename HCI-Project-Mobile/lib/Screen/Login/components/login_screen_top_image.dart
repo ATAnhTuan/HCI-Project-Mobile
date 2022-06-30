@@ -25,7 +25,7 @@ class LoginScreenTopImage extends StatelessWidget {
         Padding(
           padding: EdgeInsets.only(left: 25),
           child: Row(
-            children: [
+            children: const [
               Text(
                 "Đăng nhập",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),

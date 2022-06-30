@@ -12,7 +12,7 @@ class Lichsu extends StatelessWidget {
               "Lịch Sử",
             ))),
         body: Column(
-            children: [
+            children: const [
               Item(image: "assets/images/govap.jpg",title: "Sân Thủ Đức",status: "Đang Đặt",color: Colors.amber,button: "Hủy"),
               Item(image: "assets/images/govap.jpg",title: "Sân Thủ Đức",status: "Đang Đặt",color: Colors.green,button: "Đặt Lại"),
               Item(image: "assets/images/govap.jpg",title: "Sân Thủ Đức",status: "Đang Đặt",color: Colors.red,button: "Đặt Lại"),
@@ -54,7 +54,7 @@ class Item extends StatelessWidget {
             child: Column(
               children: [
                 Row(
-                  children: [
+                  children: const [
                     Text(
                       "11:00 ~ 13:00 - 26/05/2022",
                       style: TextStyle(
@@ -87,7 +87,7 @@ class Item extends StatelessWidget {
                           ),
                         ),
                         Row(
-                          children: [
+                          children: const [
                             Text("   2 Km  "),
                             Text("4.5"),
                             Icon(
@@ -97,7 +97,7 @@ class Item extends StatelessWidget {
                           ],
                         ),
                         Row(
-                          children: [
+                          children: const [
                             Icon(Icons.monetization_on_outlined),
                             Text("  200.000  VND"),
                           ],
@@ -109,7 +109,7 @@ class Item extends StatelessWidget {
                       children: [
                         Padding(
               padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
-              child: Container(
+              child: SizedBox(
                 width: 120,
                 height: 30,
                 child: ElevatedButton(

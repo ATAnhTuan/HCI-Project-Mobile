@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Screen/Login/LoginScreen.dart';
-import 'package:flutter_application_1/Screen/User/UserScreen.dart';
-import 'Screen/Home/BottomBar.dart';
 
 void main() {
   runApp( MyApp());
