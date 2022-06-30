@@ -9,21 +9,22 @@ class ChatList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          "Tin Nhắn",
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.normal),
-        ),
-        centerTitle: true,
-        backgroundColor: Colors.green[400],
-        elevation: 0,
-        actions: [IconButton(
-          icon: const Icon(Icons.search),
-          onPressed: (){
-            showSearch(context: context, delegate: MySearchDelegate());
-          },
-        )]
-        
-      ),
+          title: Text(
+            "Tin Nhắn",
+            style:
+                TextStyle(color: Colors.white, fontWeight: FontWeight.normal),
+          ),
+          centerTitle: true,
+          backgroundColor: Colors.green[400],
+          elevation: 0,
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.search),
+              onPressed: () {
+                showSearch(context: context, delegate: MySearchDelegate());
+              },
+            )
+          ]),
       body: Container(
         child: Column(
           children: [
@@ -43,7 +44,10 @@ class ChatList extends StatelessWidget {
               image: 'assets/images/profilepic.jpg',
               title: "Sân Quân 8",
             ),
+<<<<<<< HEAD
 
+=======
+>>>>>>> 38a38ca28ef98759653cbf04b37ae18d71c3e0db
           ],
         ),
       ),
@@ -51,8 +55,8 @@ class ChatList extends StatelessWidget {
   }
 }
 
-class MySearchDelegate extends SearchDelegate{
-  List<String> searchResults =[
+class MySearchDelegate extends SearchDelegate {
+  List<String> searchResults = [
     'Sân Thủ Đức',
     'Sân Quận 9',
     'Sân Quận 4',
@@ -60,58 +64,56 @@ class MySearchDelegate extends SearchDelegate{
   ];
   @override
   Widget? buildLeading(BuildContext context) => IconButton(
-    icon: const Icon(Icons.arrow_back),
-    onPressed: (){Navigator.pop(context);},
-  );
+        icon: const Icon(Icons.arrow_back),
+        onPressed: () {
+          Navigator.pop(context);
+        },
+      );
 
   @override
   List<Widget>? buildActions(BuildContext context) => [
-  IconButton(
-  icon: const Icon(Icons.clear),
-  onPressed: (){
-    if(query.isEmpty){
-      close(context, null);
-    }else{
-      query = '';
-    }
-
-  },
-  ),
-  ];
+        IconButton(
+          icon: const Icon(Icons.clear),
+          onPressed: () {
+            if (query.isEmpty) {
+              close(context, null);
+            } else {
+              query = '';
+            }
+          },
+        ),
+      ];
 
   @override
   Widget buildResults(BuildContext context) => Center(
-    child: Text(
-      query,
-      style: const TextStyle(fontSize: 64, fontWeight: FontWeight.bold),
-    ),
-  );
+        child: Text(
+          query,
+          style: const TextStyle(fontSize: 64, fontWeight: FontWeight.bold),
+        ),
+      );
 
   @override
   Widget buildSuggestions(BuildContext context) {
-    List<String> suggestions = searchResults.where((searchResults){
+    List<String> suggestions = searchResults.where((searchResults) {
       final results = searchResults.toLowerCase();
       final input = query.toLowerCase();
       return results.contains(input);
     }).toList();
-        
+
     return ListView.builder(
-        itemCount: suggestions.length,
-        itemBuilder: (context, index){
-      final suggestion = suggestions[index];
-      return ListTile(
-          title: Text(suggestion),
-      onTap: (){
-query = suggestion;
-showResults(context);
-      }
-        );
-    },
+      itemCount: suggestions.length,
+      itemBuilder: (context, index) {
+        final suggestion = suggestions[index];
+        return ListTile(
+            title: Text(suggestion),
+            onTap: () {
+              query = suggestion;
+              showResults(context);
+            });
+      },
     );
   }
 }
-
-
 
 class ChatItem extends StatelessWidget {
   final String image;
@@ -145,6 +147,7 @@ class ChatItem extends StatelessWidget {
                 ),
               ],
             ),
+<<<<<<< HEAD
             Padding(
               padding: const EdgeInsets.only(left:20, top: 10 ),
               child: Column(
@@ -154,6 +157,16 @@ class ChatItem extends StatelessWidget {
                     title,
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20,
                     ),
+=======
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+>>>>>>> 38a38ca28ef98759653cbf04b37ae18d71c3e0db
                   ),
                   Text("You: What's Man! . 9:40 AM ")
                 ],
