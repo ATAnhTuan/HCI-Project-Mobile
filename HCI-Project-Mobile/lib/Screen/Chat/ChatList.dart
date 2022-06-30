@@ -44,10 +44,6 @@ class ChatList extends StatelessWidget {
               image: 'assets/images/profilepic.jpg',
               title: "Sân Quân 8",
             ),
-<<<<<<< HEAD
-
-=======
->>>>>>> 38a38ca28ef98759653cbf04b37ae18d71c3e0db
           ],
         ),
       ),
@@ -147,7 +143,6 @@ class ChatItem extends StatelessWidget {
                 ),
               ],
             ),
-<<<<<<< HEAD
             Padding(
               padding: const EdgeInsets.only(left:20, top: 10 ),
               child: Column(
@@ -156,8 +151,7 @@ class ChatItem extends StatelessWidget {
                   Text(
                     title,
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20,
-                    ),
-=======
+                    ),),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -166,19 +160,14 @@ class ChatItem extends StatelessWidget {
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
->>>>>>> 38a38ca28ef98759653cbf04b37ae18d71c3e0db
                   ),
-                  Text("You: What's Man! . 9:40 AM ")
-                ],
-              ),
             ),
             Spacer(),
             Column(
               children: [Icon(Icons.check_circle_outline_rounded)],
-            )
-          ],
-        ),
+            ),
       ),
+    ],
     );
   }
 }
