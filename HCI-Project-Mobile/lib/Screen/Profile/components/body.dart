@@ -68,7 +68,7 @@ class Body extends StatelessWidget {
 
   Widget buildname() {
     return Column(
-      children: [
+      children: const [
         Text(
           "Trần Gia Hoàng",
           style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),

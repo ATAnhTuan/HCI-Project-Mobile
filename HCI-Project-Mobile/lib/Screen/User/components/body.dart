@@ -21,7 +21,7 @@ class Body extends StatelessWidget {
               ),
               Container(
                 child: Column(
-                  children: [
+                  children: const [
                     UserDetails(
                       icon: Icons.person,
                       labelText: "Họ và Tên",

@@ -11,15 +11,13 @@ class Lichsu extends StatelessWidget {
             title: (Text(
               "Lịch Sử",
             ))),
-        body: SingleChildScrollView(
-          child: Column(
-              children: [
-                Item(image: "assets/images/govap.jpg",title: "Sân Gò Vấp",status: "Đang Đặt",color: Colors.amber,button: "Hủy"),
-                Item(image: "assets/images/quan1.jpg",title: "Sân Quận 1",status: "Đã Đặt",color: Colors.green,button: "Đặt Lại"),
-                Item(image: "assets/images/quan5.jpg",title: "Sân Quận 5",status: "Đã Hủy ",color: Colors.red,button: "Đặt Lại"),
-                Item(image: "assets/images/quan9.jpg",title: "Sân Quận 9",status: "Chờ Đánh Giá",color: Colors.blue,button: "Đánh Giá"),
-              ],
-          ),
+        body: Column(
+            children: const [
+              Item(image: "assets/images/govap.jpg",title: "Sân Thủ Đức",status: "Đang Đặt",color: Colors.amber,button: "Hủy"),
+              Item(image: "assets/images/govap.jpg",title: "Sân Thủ Đức",status: "Đang Đặt",color: Colors.green,button: "Đặt Lại"),
+              Item(image: "assets/images/govap.jpg",title: "Sân Thủ Đức",status: "Đang Đặt",color: Colors.red,button: "Đặt Lại"),
+              Item(image: "assets/images/govap.jpg",title: "Sân Thủ Đức",status: "Đang Đặt",color: Colors.blue,button: "Đánh Giá"),
+            ],
         ));
   }
 }
@@ -56,7 +54,7 @@ class Item extends StatelessWidget {
             child: Column(
               children: [
                 Row(
-                  children: [
+                  children: const [
                     Text(
                       "11:00 ~ 13:00 - 26/05/2022",
                       style: TextStyle(
@@ -89,7 +87,7 @@ class Item extends StatelessWidget {
                           ),
                         ),
                         Row(
-                          children: [
+                          children: const [
                             Text("   2 Km  "),
                             Text("4.5"),
                             Icon(
@@ -99,7 +97,7 @@ class Item extends StatelessWidget {
                           ],
                         ),
                         Row(
-                          children: [
+                          children: const [
                             Icon(Icons.monetization_on_outlined),
                             Text("  200.000  VND"),
                           ],
@@ -111,7 +109,7 @@ class Item extends StatelessWidget {
                       children: [
                         Padding(
               padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
-              child: Container(
+              child: SizedBox(
                 width: 120,
                 height: 30,
                 child: ElevatedButton(

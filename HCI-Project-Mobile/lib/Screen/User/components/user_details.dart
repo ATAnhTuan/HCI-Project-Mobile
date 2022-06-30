@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 class UserDetails extends StatefulWidget {
-  UserDetails({
+  const UserDetails({
     Key? key,
     required this.icon,
     required this.labelText,

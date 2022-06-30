@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Screen/Home/Xacnhan.dart';
 import 'package:table_calendar/table_calendar.dart';
-import 'Chonsan.dart';
 
 class DatLich extends StatefulWidget {
   @override
@@ -72,7 +71,7 @@ class _DatLichState extends State<DatLich> {
                   child: Column(
                   
                       crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
+                      children: const [
                         Text(
                           "11h:00 ~ 13h:00",
                           style: TextStyle(
@@ -144,7 +143,7 @@ class _DatLichState extends State<DatLich> {
             ),
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
-              child: Container(
+              child: SizedBox(
                 width: 250,
                 height: 45,
                 child: ElevatedButton(

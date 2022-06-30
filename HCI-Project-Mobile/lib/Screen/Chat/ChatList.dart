@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Screen/Chat/ChatScreen.dart';
 import 'package:flutter_application_1/Screen/Chat/Searchchat.dart';
-import '../../Screen/Home/BottomBar.dart';
 
 class ChatList extends StatelessWidget {
   const ChatList({Key? key}) : super(key: key);
@@ -29,7 +28,7 @@ class ChatList extends StatelessWidget {
           ]),
       body: Container(
         child: Column(
-          children: [
+          children: const [
             ChatItem(
               image: 'assets/images/hoangtran.jpg',
               title: "Sân Quận 5",
@@ -136,34 +135,36 @@ class ChatItem extends StatelessWidget {
         },
         child: Row(
           children: <Widget>[
-            Column(
-              children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(50),
-                  child: Image.asset(
-                    image,
-                    width: 80,
-                    height: 80,
-                    fit: BoxFit.fill,
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Column(
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(50),
+                    child: Image.asset(
+                      image,
+                      width: 80,
+                      height: 80,
+                      fit: BoxFit.fill,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(title,
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                    )),
-                Text("You: What's Man! . 9:40 AM ")
-              ],
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(title,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      )),
+                  Text("You: What's Man! . 9:40 AM ")
+                ],
+              ),
             ),
-            Spacer(),
-            Column(
-              children: [Icon(Icons.check_circle_outline_rounded)],
-            )
           ],
         ),
       ),

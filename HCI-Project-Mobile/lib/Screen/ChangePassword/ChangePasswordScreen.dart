@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Screen/Home/HomeScreen.dart';
 import 'package:flutter_application_1/Screen/Login/LoginScreen.dart';
-import '../OTP/OTPScreen.dart';
 
 class ChangePassword extends StatelessWidget{
   @override
@@ -29,7 +27,7 @@ class ChangePassword extends StatelessWidget{
           Padding(
             padding: EdgeInsets.only(left: 25),
             child: Row(
-              children: [
+              children: const [
                 Text(
                   "Thay đổi mật khẩu",
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
@@ -43,7 +41,7 @@ class ChangePassword extends StatelessWidget{
           Padding(
             padding: EdgeInsets.only(left: 25),
             child: Row(
-              children: [
+              children: const [
                 Text(
                   "Nhập mật khẩu mới",
                   style: TextStyle(fontSize: 15),

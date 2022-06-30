@@ -1,4 +1,3 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Screen/ChangePassword/ChangePasswordScreen.dart';
@@ -31,7 +30,7 @@ class EnterOTP extends StatelessWidget{
           Padding(
             padding: EdgeInsets.only(left: 25),
             child: Row(
-              children: [
+              children: const [
                 Text(
                   "Nhập mã OTP",
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
@@ -45,7 +44,7 @@ class EnterOTP extends StatelessWidget{
           Padding(
             padding: EdgeInsets.only(left: 25),
             child: Row(
-              children: [
+              children: const [
                 Text(
                   "Nhập mã OTP từ điện thoại của bạn",
                   style: TextStyle(fontSize: 15),

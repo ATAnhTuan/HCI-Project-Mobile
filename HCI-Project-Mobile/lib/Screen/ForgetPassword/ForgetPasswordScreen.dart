@@ -27,7 +27,7 @@ class ForgetPasswordScreen extends StatelessWidget{
           Padding(
             padding: EdgeInsets.only(left: 25),
             child: Row(
-              children: [
+              children: const [
                 Text(
                   "Quên mật khẩu?",
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
@@ -41,7 +41,7 @@ class ForgetPasswordScreen extends StatelessWidget{
           Padding(
             padding: EdgeInsets.only(left: 25),
             child: Row(
-              children: [
+              children: const [
                 Text(
                   "Nhập email khôi phục tài khoản",
                   style: TextStyle(fontSize: 15),

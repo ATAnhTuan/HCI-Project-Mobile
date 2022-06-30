@@ -24,7 +24,7 @@ class SignUpScreenTopImage extends StatelessWidget {
         Padding(
           padding: EdgeInsets.only(left: 25),
           child: Row(
-            children: [
+            children: const [
               Text(
                 "Đăng Ký",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),

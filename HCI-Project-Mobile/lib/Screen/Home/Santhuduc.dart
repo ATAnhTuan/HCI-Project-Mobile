@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Screen/Home/Chonsan.dart';
-import 'BottomBar.dart';
-import 'Datlich.dart';
 
 class FootballField extends StatelessWidget {
   const FootballField({Key? key}) : super(key: key);
@@ -62,7 +60,7 @@ class FootballField extends StatelessWidget {
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
+                              children: const [
                                 Text(
                                   "Giờ Hoạt Động : 5h-00h",
                                   style: TextStyle(
@@ -120,7 +118,7 @@ class FootballField extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Row(
-                                  children: [
+                                  children: const [
                                     Icon(
                                       Icons.sports_soccer,
                                       size: 30,
@@ -133,7 +131,7 @@ class FootballField extends StatelessWidget {
                                 ),
                                 Spacer(),
                                 Row(
-                                  children: [
+                                  children: const [
                                     Icon(Icons.local_fire_department_rounded,
                                         size: 30),
                                     Text("11h ~ 12h",
@@ -149,7 +147,7 @@ class FootballField extends StatelessWidget {
                                 ),
                                 Spacer(),
                                 Row(
-                                  children: [
+                                  children: const [
                                     Icon(Icons.local_fire_department_rounded,
                                         size: 30),
                                     Text("12h ~ 13h",
@@ -165,7 +163,7 @@ class FootballField extends StatelessWidget {
                                 ),
                                 Spacer(),
                                 Row(
-                                  children: [
+                                  children: const [
                                     Icon(Icons.local_fire_department_rounded,
                                         size: 30),
                                     Text("13h ~ 14h",
@@ -181,7 +179,7 @@ class FootballField extends StatelessWidget {
                                 ),
                                 Spacer(),
                                 Row(
-                                  children: [
+                                  children: const [
                                     Icon(Icons.local_fire_department_rounded,
                                         size: 30),
                                     Text("14h ~ 15h",
@@ -229,7 +227,7 @@ class FootballField extends StatelessWidget {
                           padding: const EdgeInsets.all(8.0),
                           child: Column(children: [
                             Row(
-                              children: [
+                              children: const [
                                 Icon(
                                   Icons.shower_rounded,
                                   size: 40,
@@ -242,7 +240,7 @@ class FootballField extends StatelessWidget {
                             ),
                             Spacer(),
                             Row(
-                              children: [
+                              children: const [
                                 Icon(
                                   Icons.person,
                                   size: 40,
@@ -255,7 +253,7 @@ class FootballField extends StatelessWidget {
                             ),
                             Spacer(),
                             Row(
-                              children: [
+                              children: const [
                                 Icon(
                                   Icons.wine_bar_outlined,
                                   size: 40,
@@ -268,7 +266,7 @@ class FootballField extends StatelessWidget {
                             ),
                             Spacer(),
                             Row(
-                              children: [
+                              children: const [
                                 Icon(
                                   Icons.snowshoeing_sharp,
                                   size: 40,
@@ -286,7 +284,7 @@ class FootballField extends StatelessWidget {
                     Padding(
                       padding:
                           const EdgeInsets.only(left: 20, right: 20, top: 20),
-                      child: Container(
+                      child: SizedBox(
                         width: 250,
                         height: 45,
                         child: ElevatedButton(

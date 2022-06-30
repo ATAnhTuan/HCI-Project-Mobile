@@ -2,7 +2,6 @@ import 'package:babstrap_settings_screen/babstrap_settings_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Screen/setting/Lichsu.dart';
 import 'package:flutter_application_1/Screen/setting/Yeuthich.dart';
-import '../../Screen/User/UserScreen.dart';
 
 class SettingWidget extends StatelessWidget {
   const SettingWidget({Key? key}) : super(key: key);

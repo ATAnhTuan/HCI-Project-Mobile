@@ -28,7 +28,7 @@ class SearchScreen extends StatelessWidget {
         ],
       ),
       body: Column(
-        children: [
+        children: const [
           ListItem(
             image: 'assets/images/govap.jpg',
             title: "  Sân Quân Gò Vấp",
@@ -93,14 +93,14 @@ class ListItem extends StatelessWidget {
                   ),
                 ),
                 Row(
-                  children: [
+                  children: const [
                     Text("   2 Km  "),
                     Text("4.5"),
                     Icon(Icons.star_outlined,color: Colors.yellow,) 
                   ],
                 ),
                 Row(
-                  children: [
+                  children: const [
                     Icon(Icons.monetization_on_outlined),
                     Text("  200.000  VND"),
                   ],
@@ -109,7 +109,7 @@ class ListItem extends StatelessWidget {
             ),
             Spacer(),
             Column(
-              children: [Icon(Icons.favorite_border_outlined)],
+              children: const [Icon(Icons.favorite_border_outlined)],
             )
           ],
         ),

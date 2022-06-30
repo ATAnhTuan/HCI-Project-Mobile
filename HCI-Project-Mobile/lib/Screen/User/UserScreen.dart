@@ -33,7 +33,7 @@ class UserScreen extends StatelessWidget {
               PopupMenuItem(
                 onTap: () {},
                 child: Row(
-                  children: [
+                  children: const [
                     Icon(
                       Icons.delete_forever,
                       color: Colors.black54,
@@ -48,7 +48,7 @@ class UserScreen extends StatelessWidget {
               PopupMenuItem(
                 onTap: () {},
                 child: Row(
-                  children: [
+                  children: const [
                     Icon(
                       Icons.lock,
                       color: Colors.black54,
@@ -63,7 +63,7 @@ class UserScreen extends StatelessWidget {
               PopupMenuItem(
                 onTap: () {},
                 child: Row(
-                  children: [
+                  children: const [
                     Icon(
                       Icons.share,
                       color: Colors.black54,
