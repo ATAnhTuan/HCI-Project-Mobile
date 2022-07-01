@@ -11,13 +11,15 @@ class Lichsu extends StatelessWidget {
             title: (Text(
               "Lịch Sử",
             ))),
-        body: Column(
-            children: const [
-              Item(image: "assets/images/govap.jpg",title: "Sân Thủ Đức",status: "Đang Đặt",color: Colors.amber,button: "Hủy"),
-              Item(image: "assets/images/govap.jpg",title: "Sân Thủ Đức",status: "Đang Đặt",color: Colors.green,button: "Đặt Lại"),
-              Item(image: "assets/images/govap.jpg",title: "Sân Thủ Đức",status: "Đang Đặt",color: Colors.red,button: "Đặt Lại"),
-              Item(image: "assets/images/govap.jpg",title: "Sân Thủ Đức",status: "Đang Đặt",color: Colors.blue,button: "Đánh Giá"),
-            ],
+        body: SingleChildScrollView(
+          child: Column(
+              children: [
+                Item(image: "assets/images/govap.jpg",title: "Sân Gò Vấp",status: "Đang Đặt",color: Colors.amber,button: "Hủy"),
+                Item(image: "assets/images/quan1.jpg",title: "Sân Quận 1",status: "Đã Đặt",color: Colors.green,button: "Đặt Lại"),
+                Item(image: "assets/images/quan5.jpg",title: "Sân Quận 5",status: "Đã Hủy ",color: Colors.red,button: "Đặt Lại"),
+                Item(image: "assets/images/quan9.jpg",title: "Sân Quận 9",status: "Chờ Đánh Giá",color: Colors.blue,button: "Đánh Giá"),
+              ],
+          ),
         ));
   }
 }
@@ -93,7 +95,9 @@ class Item extends StatelessWidget {
                             Icon(
                               Icons.star_outlined,
                               color: Colors.yellow,
-                            )
+                            ),
+                            Text(" 5"),
+                            Icon(Icons.person)
                           ],
                         ),
                         Row(

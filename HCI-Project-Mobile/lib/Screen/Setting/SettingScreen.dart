@@ -2,6 +2,7 @@ import 'package:babstrap_settings_screen/babstrap_settings_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Screen/setting/Lichsu.dart';
 import 'package:flutter_application_1/Screen/setting/Yeuthich.dart';
+import 'package:flutter_application_1/Screen/setting/danhgia.dart';
 
 class SettingWidget extends StatelessWidget {
   const SettingWidget({Key? key}) : super(key: key);
@@ -32,7 +33,7 @@ class SettingWidget extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           child: ListView(
             children: [
-            /*  BigUserCard(
+              /*  BigUserCard(
                 cardColor: Colors.green,
                 userName: "Trần Gia Hoàng",
                 userProfilePic: AssetImage("assets/images/hoangtran.jpg"),
@@ -90,7 +91,13 @@ class SettingWidget extends StatelessWidget {
                     subtitle: "Xem lại lịch sử sân",
                   ),
                   SettingsItem(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Danhgia()),
+                      );
+                    },
                     icons: Icons.feedback,
                     iconStyle: IconStyle(
                       iconsColor: Colors.yellow[400],
