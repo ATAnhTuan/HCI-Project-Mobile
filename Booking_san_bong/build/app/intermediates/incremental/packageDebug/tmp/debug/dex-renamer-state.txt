@@ -1,0 +1,7 @@
+#Mon Mar 14 12:13:40 ICT 2022
+base.1=C\:\\demo\\Booking_san_bong\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+path.1=classes.dex
+base.0=D\:\\TUANVASE140819\\0_SWD\\Booking_san_bong\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+path.0=classes.dex

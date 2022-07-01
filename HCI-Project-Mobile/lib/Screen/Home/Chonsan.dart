@@ -58,7 +58,7 @@ class List2Items extends StatelessWidget {
                 child: Item(tile: title1, image: image1,people: "Sân 5",price: "200.000"),
               ),
               Expanded(
-                child: Item(tile: title2, image: image2, people: "Sân 7",price: "3500.000",),
+                child: Item(tile: title2, image: image2, people: "Sân 7",price: "350.000",),
               )
             ],
           ),

@@ -165,6 +165,8 @@ class ChatItem extends StatelessWidget {
                 ],
               ),
             ),
+            Spacer(),
+            Icon(Icons.check_circle_outline)
           ],
         ),
       ),

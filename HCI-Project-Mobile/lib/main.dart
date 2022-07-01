@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Screen/Login/LoginScreen.dart';
+import 'package:flutter_application_1/Screen/Owner/Ownerpage.dart';
 
 void main() {
   runApp( MyApp());
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
+      // home: Ownerpage(),
       home: LoginScreen(),
     );
   }

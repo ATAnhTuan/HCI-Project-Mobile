@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Screen/Login/LoginSuccess.dart';
+import 'package:flutter_application_1/Screen/Owner/Ownerpage.dart';
 import 'package:flutter_application_1/components/forget_password.dart';
 import '../../../components/already_have_an_account_acheck.dart';
 import '../../../components/constants.dart';
@@ -13,16 +14,19 @@ class LoginForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController controller = TextEditingController();
     return Form(
       child: Column(
         children: [
-          const TextField(
-            obscureText: true,
+          TextField(
+            controller: controller,
+            obscureText: false,
             decoration: InputDecoration(
               border: OutlineInputBorder(),
               prefixIcon: Icon(Icons.account_circle_outlined),
               labelText: 'Email',
             ),
+            
           ),
           Text(""),
           const TextField(
@@ -61,7 +65,9 @@ class LoginForm extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => LoginSuccess()),
+                        MaterialPageRoute(builder: (context) {
+                          return controller.text == 'owner' ? Ownerpage() : LoginSuccess();
+                        }),
                       );
                     },
                     child: Text(

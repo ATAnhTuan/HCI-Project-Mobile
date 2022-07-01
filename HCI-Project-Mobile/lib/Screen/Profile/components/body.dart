@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Screen/Login/LoginScreen.dart';
+import 'package:flutter_application_1/Screen/setting/danhgia.dart';
 import 'package:flutter_application_1/Screen/setting/Lichsu.dart';
 import '../../setting/SettingScreen.dart';
 import '../LogoutSuccess.dart';
@@ -22,21 +23,18 @@ class Body extends StatelessWidget {
             text: "Chỉnh sửa hồ sơ",
             icon: "assets/icons/User.svg",
             press: () {
-                Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const UserScreen()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const UserScreen()));
             },
           ),
           ProfileMenu(
             text: "Lịch sử giao dịch",
             icon: "assets/icons/Cash.svg",
             press: () {
-                            Navigator.push(
+              Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => const Lichsu()),
               );
-
             },
           ),
           ProfileMenu(
@@ -52,15 +50,21 @@ class Body extends StatelessWidget {
           ProfileMenu(
             text: "Trung tâm trợ giúp khách hàng",
             icon: "assets/icons/Question mark.svg",
-            press: () {},
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Danhgia()),
+              );
+            },
           ),
           ProfileMenu(
             text: "Đăng xuất",
             icon: "assets/icons/Log out.svg",
             press: () { Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => LogoutSuccess()),
+              MaterialPageRoute(builder: (context) => LoginScreen()),
             );},
+
           ),
         ],
       ),

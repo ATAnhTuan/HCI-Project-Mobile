@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Screen/Owner/Add.dart';
 import 'package:flutter_application_1/Screen/Owner/HomeScreenOwner.dart';
+import 'package:flutter_application_1/Screen/setting/ProfileScreenOwner.dart';
 import '../Profile/ProfileScreen.dart';
 import 'package:flutter_application_1/Screen/Search/SearchScreen.dart';
 import '../../Screen/Chat/ChatList.dart';
@@ -20,9 +22,9 @@ class _MyStatefulWidgetState extends State<Ownerpage> {
    ,
     ChatList()
     ,
-    SearchScreen()
+    Add()
     ,
-   ProfileScreen()
+   ProfileScreenOwner()
   ];
 
   void _onItemTapped(int index) {
@@ -51,8 +53,8 @@ class _MyStatefulWidgetState extends State<Ownerpage> {
             label: 'Chat',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search_outlined),
-            label: 'Tìm kiếm',
+            icon: Icon(Icons.add_box_outlined),
+            label: 'Thêm Sân',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.account_box_rounded),
