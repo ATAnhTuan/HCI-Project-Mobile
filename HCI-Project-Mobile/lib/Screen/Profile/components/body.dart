@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Screen/Login/LoginScreen.dart';
 import 'package:flutter_application_1/Screen/setting/Lichsu.dart';
 import '../../setting/SettingScreen.dart';
+import '../LogoutSuccess.dart';
 import 'profile_menu.dart';
 import 'profile_pic.dart';
 import '../../User/UserScreen.dart';
@@ -58,7 +59,7 @@ class Body extends StatelessWidget {
             icon: "assets/icons/Log out.svg",
             press: () { Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const LoginScreen()),
+              MaterialPageRoute(builder: (context) => LogoutSuccess()),
             );},
           ),
         ],
