@@ -14,16 +14,19 @@ class LoginForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController controller = TextEditingController();
     return Form(
       child: Column(
         children: [
-          const TextField(
+          TextField(
+            controller: controller,
             obscureText: false,
             decoration: InputDecoration(
               border: OutlineInputBorder(),
               prefixIcon: Icon(Icons.account_circle_outlined),
               labelText: 'Email',
             ),
+            
           ),
           Text(""),
           const TextField(
@@ -62,7 +65,9 @@ class LoginForm extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => LoginSuccess()),
+                        MaterialPageRoute(builder: (context) {
+                          return controller.text == 'owner' ? Ownerpage() : LoginSuccess();
+                        }),
                       );
                     },
                     child: Text(

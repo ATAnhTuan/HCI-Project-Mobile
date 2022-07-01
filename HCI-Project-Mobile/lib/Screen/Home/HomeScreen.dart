@@ -5,9 +5,14 @@ import 'package:flutter_application_1/Screen/setting/Yeuthich.dart';
 import 'Santhuduc.dart';
 import 'package:flutter_application_1/Screen/Home/Santhuduc.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;

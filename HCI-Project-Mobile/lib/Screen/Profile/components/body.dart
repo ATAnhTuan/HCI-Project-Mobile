@@ -60,7 +60,7 @@ class Body extends StatelessWidget {
             text: "Đăng xuất",
             icon: "assets/icons/Log out.svg",
             press: () {
-              Navigator.push(
+               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => const LoginScreen()),
               );
