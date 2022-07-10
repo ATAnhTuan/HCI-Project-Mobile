@@ -106,19 +106,12 @@ class ItemSale extends StatelessWidget {
                   color: Colors.green[400],
                 ),
                 Spacer(),
-                Text(
-                  "250.000/h",
-                  style: TextStyle(
-                    color: Colors.red,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
                 Spacer(),
                 Text("300.000/h",
                     style: TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.w500,
-                        decoration: TextDecoration.lineThrough))
+                     ))
               ],
             )
           ],
@@ -142,7 +135,7 @@ class Edititem extends StatelessWidget {
           Row(
             children: [
               Text(
-                "Giảm Giá : 50.000/h",
+                "Giá Giảm : 50.000/h",
                 style: TextStyle(color: Colors.red),
               ),
               Icon(Icons.edit),
@@ -215,10 +208,8 @@ class ListItem extends StatelessWidget {
       padding: EdgeInsets.all(5),
       child: Container(
         padding: EdgeInsets.all(5),
-        decoration: BoxDecoration(border: Border.all(
-          color: Colors.lightBlue,
-          width: 2
-        )),
+        decoration: BoxDecoration(
+            border: Border.all(color: Colors.lightBlue, width: 2)),
         child: Row(
           children: <Widget>[
             Column(
@@ -245,7 +236,48 @@ class ListItem extends StatelessWidget {
                         fontSize: 20,
                       ),
                     ),
-                    Icon(Icons.edit)
+                    IconButton(
+                        onPressed: () => showDialog(
+                            context: context,
+                            builder: (BuildContext context) => AlertDialog(
+                                  title: const Text('AlertDialog Title'),
+                                  content: Container(
+                                    height: 150,
+                                    child: Column(
+                                      children: [
+                                        TextField(
+                                          obscureText: false,
+                                          decoration: InputDecoration(
+                                            border: OutlineInputBorder(),
+                                            labelText: 'Tên Sân',
+                                            
+                                          ),
+                                        ),
+                                        Spacer(),
+                                        TextField(
+                                          obscureText: false,
+                                          decoration: InputDecoration(
+                                            border: OutlineInputBorder(),
+                                            labelText: 'Giá Tiền',
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () =>
+                                          Navigator.pop(context, 'Cancel'),
+                                      child: const Text('Cancel'),
+                                    ),
+                                    TextButton(
+                                      onPressed: () =>
+                                          Navigator.pop(context, 'OK'),
+                                      child: const Text('OK'),
+                                    ),
+                                  ],
+                                )),
+                        icon: Icon(Icons.edit))
                   ],
                 ),
                 Row(
@@ -254,17 +286,14 @@ class ListItem extends StatelessWidget {
                     Text("  300.000  VND  "),
                   ],
                 ),
-                Row(
-                  children: const [
-                    Icon(Icons.person),
-                    Text("  5    "),
-                  ],
-                )
               ],
             ),
             Spacer(),
             Column(
-              children: const [Icon(Icons.favorite_border_outlined)],
+              children: [
+                IconButton(
+                    onPressed: () {}, icon: Icon(Icons.delete_forever_outlined))
+              ],
             )
           ],
         ),

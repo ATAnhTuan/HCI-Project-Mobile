@@ -56,18 +56,23 @@ class HomeScreenOwner extends StatelessWidget {
             ListItem(
               image: 'assets/images/govap.jpg',
               title: "  Sân Quân Gò Vấp",
+              money: "200.000VND",
             ),
             ListItem(
               image: 'assets/images/quan9.jpg',
               title: "  Sân Quận 9",
+              
+              money: "250.000VND",
             ),
             ListItem(
               image: 'assets/images/quan1.jpg',
               title: "  Sân Quận 1",
+              money: "250.000VND",
             ),
             ListItem(
               image: 'assets/images/quan5.jpg',
               title: "  Sân Quận 5",
+              money: "300.000VND",
             ),
           ],
           ),
@@ -80,10 +85,11 @@ class HomeScreenOwner extends StatelessWidget {
 class ListItem extends StatelessWidget {
   final String image;
   final String title;
+  final String money;
   const ListItem({
     Key? key,
     required this.image,
-    required this.title,
+    required this.title, required this.money,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -118,27 +124,38 @@ class ListItem extends StatelessWidget {
                     fontSize: 20,
                   ),
                 ),
-                Row(
-                  children: const [
-                    Text("   2 Km  "),
-                    Text("4.5"),
-                    Icon(
-                      Icons.star_outlined,
-                      color: Colors.yellow,
-                    )
-                  ],
+                Padding(
+                  padding: const EdgeInsets.only( left:10.0),
+                  child: Row(
+
+                    children: const [
+                      Text("4.5"),
+                      Icon(
+                        Icons.star_outlined,
+                        color: Colors.yellow,
+                      )
+                    ],
+                  ),
                 ),
-                Row(
-                  children: const [
-                    Icon(Icons.monetization_on_outlined),
-                    Text("  200.000  VND"),
-                  ],
+                Padding(
+                  padding: const EdgeInsets.only(left: 10),
+                  child: Row(
+                    children: [
+                      Icon(Icons.monetization_on_outlined),
+                      Text(money),
+                    ],
+                  ),
                 )
               ],
             ),
             Spacer(),
             Column(
-              children: const [Icon(Icons.favorite_border_outlined)],
+              
+              children: [
+                IconButton
+                (
+                  onPressed: (){}, icon: Icon(Icons.delete_forever_outlined))
+                ],
             )
           ],
         ),
