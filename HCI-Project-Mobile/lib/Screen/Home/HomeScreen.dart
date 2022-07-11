@@ -1,4 +1,6 @@
 import 'package:flutter_application_1/Screen/Home/Notification.dart';
+import 'package:flutter_application_1/Screen/Home/nearhear/Khuyenmai.dart';
+import 'package:flutter_application_1/Screen/Home/nearhear/ganday.dart';
 import 'package:flutter_application_1/Screen/setting/SettingScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Screen/setting/Yeuthich.dart';
@@ -57,19 +59,19 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
-              ItemTitle(title: "Sân Có Sẵn"),
+              ItemTitle(title: "Sân Gần Đây",function: Ganday()),
               List2Items(
                   title1: "Sân Thủ Đức",
                   title2: "Sân Quận 9",
                   image1: "assets/images/thuduc.png",
                   image2: "assets/images/quan9.jpg"),
-              ItemTitle(title: "Sân Nhiều Người Yêu Thích"),
+              ItemTitle(title: "Sân Nhiều Người Yêu Thích",function: Yeuthich()),
               List2Items(
                   title1: "Sân Quận 2",
                   title2: "Sân Quận 4",
                   image1: "assets/images/quan2.jpg",
                   image2: "assets/images/quan4.jpg"),
-              ItemTitle(title: "Sân Khuyến Mãi"),
+              ItemTitle(title: "Sân Khuyến Mãi",function: Khuyenmai()),
               List2ItemsSale(
                   title1: "Sân Quận 1",
                   title2: "Sân Quận 7",
@@ -108,9 +110,10 @@ class List2Items extends StatelessWidget {
 
 class ItemTitle extends StatelessWidget {
   final String title;
+  final StatelessWidget function;
   const ItemTitle({
     Key? key,
-    required this.title,
+    required this.title, required this.function,
   }) : super(key: key);
 
   @override
@@ -131,11 +134,11 @@ class ItemTitle extends StatelessWidget {
             ),
             Spacer(),
             TextButton(
-                onPressed: () {
+                onPressed:<Widget> () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const Yeuthich()));
+                          builder: (context) =>  function));
                 },
                 child: Text("<<Xem Thêm>>"))
           ],

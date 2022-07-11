@@ -1,5 +1,6 @@
 import 'package:babstrap_settings_screen/babstrap_settings_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Screen/Login/LoginScreen.dart';
 import 'package:flutter_application_1/Screen/setting/Lichsu.dart';
 import 'package:flutter_application_1/Screen/setting/Yeuthich.dart';
 import 'package:flutter_application_1/Screen/setting/danhgia.dart';
@@ -108,7 +109,12 @@ class SettingWidget extends StatelessWidget {
                     subtitle: "Gửi đánh giá dịch vụ sản phẩm",
                   ),
                   SettingsItem(
-                    onTap: () {},
+                    onTap: () {
+                       Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => LoginScreen()),
+            );
+                    },
                     icons: Icons.logout,
                     iconStyle: IconStyle(
                       iconsColor: Colors.black,

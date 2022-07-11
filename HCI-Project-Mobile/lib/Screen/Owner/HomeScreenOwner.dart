@@ -56,23 +56,23 @@ class HomeScreenOwner extends StatelessWidget {
             ListItem(
               image: 'assets/images/govap.jpg',
               title: "  Sân Quân Gò Vấp",
-              money: "200.000VND",
+              money: "200.000 VND",
             ),
             ListItem(
               image: 'assets/images/quan9.jpg',
               title: "  Sân Quận 9",
               
-              money: "250.000VND",
+              money: "250.000 VND",
             ),
             ListItem(
               image: 'assets/images/quan1.jpg',
               title: "  Sân Quận 1",
-              money: "250.000VND",
+              money: "250.000 VND",
             ),
             ListItem(
               image: 'assets/images/quan5.jpg',
               title: "  Sân Quận 5",
-              money: "300.000VND",
+              money: "300.000 VND",
             ),
           ],
           ),

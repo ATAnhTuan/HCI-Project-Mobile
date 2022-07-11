@@ -57,15 +57,6 @@ class Body extends StatelessWidget {
               );
             },
           ),
-          ProfileMenu(
-            text: "Đăng xuất",
-            icon: "assets/icons/Log out.svg",
-            press: () { Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => LoginScreen()),
-            );},
-
-          ),
         ],
       ),
     );

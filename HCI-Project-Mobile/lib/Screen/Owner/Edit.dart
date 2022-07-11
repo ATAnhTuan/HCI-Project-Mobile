@@ -285,7 +285,7 @@ class ListItem extends StatelessWidget {
                     Icon(Icons.monetization_on_outlined),
                     Text("  300.000  VND  "),
                   ],
-                ),
+                ),   
               ],
             ),
             Spacer(),

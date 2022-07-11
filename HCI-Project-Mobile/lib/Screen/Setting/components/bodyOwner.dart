@@ -50,22 +50,13 @@ class BodyOwner extends StatelessWidget {
             text: "Trung tâm trợ giúp khách hàng",
             icon: "assets/icons/Question mark.svg",
             press: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const Danhgia()),
-              );
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(builder: (context) => const Danhgia()),
+              // );
             },
           ),
-          ProfileMenu(
-            text: "Đăng xuất",
-            icon: "assets/icons/Log out.svg",
-            press: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const LoginScreen()),
-              );
-            },
-          ),
+
         ],
       ),
     );
