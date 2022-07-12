@@ -240,7 +240,7 @@ class ListItem extends StatelessWidget {
                         onPressed: () => showDialog(
                             context: context,
                             builder: (BuildContext context) => AlertDialog(
-                                  title: const Text('AlertDialog Title'),
+                                  title: const Text('Sửa Sân Nhỏ'),
                                   content: Container(
                                     height: 150,
                                     child: Column(

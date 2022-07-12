@@ -10,8 +10,23 @@ class DatLich extends StatefulWidget {
 class _DatLichState extends State<DatLich> {
   DateTime selectedDay = DateTime.now();
   DateTime focusedDay = DateTime.now();
+
+
+
+
+  
   @override
   Widget build(BuildContext context) {
+    Future<TimeOfDay?> selectedTimeRTL = showTimePicker(
+  context: context,
+  initialTime: TimeOfDay.now(),
+  builder: (BuildContext context, Widget? child) {
+    return Directionality(
+      textDirection: TextDirection.rtl,
+      child: child!,
+    );
+  },
+);
     return Scaffold(
       appBar: AppBar(
           backgroundColor: Colors.green[400],
@@ -71,7 +86,7 @@ class _DatLichState extends State<DatLich> {
                   child: Column(
                   
                       crossAxisAlignment: CrossAxisAlignment.center,
-                      children: const [
+                      children:  [
                         Text(
                           "11h:00 ~ 13h:00",
                           style: TextStyle(
@@ -84,10 +99,11 @@ class _DatLichState extends State<DatLich> {
                               fontSize: 20,
                             )),
                         Spacer(),
-                        Text("18h:00 ~ 19h:00",
-                            style: TextStyle(
-                              fontSize: 20,
-                            )),
+                        TextButton(
+                         onPressed: (){},
+                         child: Text("123"),
+                            ),
+                            
                       ]),
                 ),
               ),
@@ -110,7 +126,7 @@ class _DatLichState extends State<DatLich> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(
+              padding:  EdgeInsets.only(
                   top: 10, left: 40, right: 40, bottom: 10),
               child: Row(
                 children: [
@@ -127,7 +143,8 @@ class _DatLichState extends State<DatLich> {
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                         backgroundColor: Colors.grey[400],
-                      ))
+                      )),
+
                 ],
               ),
             ),
@@ -169,3 +186,5 @@ class _DatLichState extends State<DatLich> {
     );
   }
 }
+
+

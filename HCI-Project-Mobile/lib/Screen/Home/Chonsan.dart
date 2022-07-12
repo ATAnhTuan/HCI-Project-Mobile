@@ -55,10 +55,10 @@ class List2Items extends StatelessWidget {
           child: Row(
             children: <Widget>[
               Expanded(
-                child: Item(tile: title1, image: image1,price: "200.000 VND"),
+                child: Item(tile: title1, image: image1,price: "200.000 VND", person: "5 vs 5"),
               ),
               Expanded(
-                child: Item(tile: title2, image: image2, price: "350.000 VND",),
+                child: Item(tile: title2, image: image2, price: "350.000 VND", person: "7 vs 7",),
               )
             ],
           ),
@@ -67,13 +67,14 @@ class List2Items extends StatelessWidget {
 }
 
 class Item extends StatelessWidget {
+  final String person;
   final String tile;
   final String image;
   final String price;
   const Item({
     Key? key,
     required this.tile,
-    required this.image, required this.price,
+    required this.image, required this.price, required this.person,
   }) : super(key: key);
 
   @override
@@ -112,6 +113,13 @@ class Item extends StatelessWidget {
                     color: Colors.yellow,
                   ),
                   Spacer(),
+                  Text(person,
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
+                  Icon(
+                    Icons.person,
+                    color: Colors.green[400],
+                  ),
                 ],
               ),
               Row(
