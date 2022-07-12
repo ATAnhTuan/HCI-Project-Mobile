@@ -12,13 +12,15 @@ class Add extends StatelessWidget {
           automaticallyImplyLeading: false,
           backgroundColor: Colors.green[400],
           title: Text("Thêm Sân")),
-      body: Container(
-        child: Column(
-          children: [
-            addbigitem(),
-            additem(),
-            Confirm(),
-          ],
+      body: SingleChildScrollView(
+        child: Container(
+          child: Column(
+            children: [
+              addbigitem(),
+              additem(),
+              Confirm(),
+            ],
+          ),
         ),
       ),
     );
@@ -55,10 +57,8 @@ class addbigitem extends StatelessWidget {
               ],
             ),
           ),
-          Icon(
-            Icons.add_a_photo_outlined,
-            size: 100,
-          ),
+          addsanto(
+            context),
           Row(
             children: [
               Text(
@@ -102,7 +102,7 @@ class additem extends StatelessWidget {
                   "Sân Nhỏ   ",
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
-                Icon(Icons.add_box_outlined)
+                editbutton(context)
               ],
             ),
           ),
@@ -131,6 +131,107 @@ class additem extends StatelessWidget {
     );
   }
 }
+IconButton addsanto(BuildContext context) {
+  return IconButton(
+      onPressed: () => showDialog(
+          context: context,
+          builder: (BuildContext context) => AlertDialog(
+                title: const Text('Thêm Sân Nhỏ'),
+                content: Container(
+                  height: 240,
+                  child: Column(
+                    children: [
+                      TextField(
+                        obscureText: false,
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          labelText: 'Tên Sân',
+                        ),
+                      ),
+                      Spacer(),
+                      TextField(
+                        obscureText: false,
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          labelText: 'Giá Tiền',
+                        ),
+                        
+                      ),
+                      TextField(
+                        obscureText: false,
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          labelText: 'Giá Giảm',
+                        ),
+                        
+                      ),
+                      TextField(
+                        obscureText: false,
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          labelText: 'Địa Chỉ',
+                        ),
+                        
+                      ),
+                    ],
+                  ),
+                ),
+                actions: [
+                  TextButton(
+                    onPressed: () => Navigator.pop(context, 'Cancel'),
+                    child: const Text('Cancel'),
+                  ),
+                  TextButton(
+                    onPressed: () => Navigator.pop(context, 'OK'),
+                    child: const Text('OK'),
+                  ),
+                ],
+              )),
+      icon: Icon(Icons.add_a_photo_outlined,size: 100,));
+}
+
+IconButton editbutton(BuildContext context) {
+  return IconButton(
+      onPressed: () => showDialog(
+          context: context,
+          builder: (BuildContext context) => AlertDialog(
+                title: const Text('Thêm Sân Nhỏ'),
+                content: Container(
+                  height: 150,
+                  child: Column(
+                    children: [
+                      TextField(
+                        obscureText: false,
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          labelText: 'Tên Sân',
+                        ),
+                      ),
+                      Spacer(),
+                      TextField(
+                        obscureText: false,
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          labelText: 'Giá Tiền',
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                actions: [
+                  TextButton(
+                    onPressed: () => Navigator.pop(context, 'Cancel'),
+                    child: const Text('Cancel'),
+                  ),
+                  TextButton(
+                    onPressed: () => Navigator.pop(context, 'OK'),
+                    child: const Text('OK'),
+                  ),
+                ],
+              )),
+      icon: Icon(Icons.add_box_outlined));
+}
+
 class Confirm extends StatelessWidget {
   const Confirm({Key? key}) : super(key: key);
 

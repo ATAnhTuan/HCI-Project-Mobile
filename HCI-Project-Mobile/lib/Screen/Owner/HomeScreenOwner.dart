@@ -152,9 +152,7 @@ class ListItem extends StatelessWidget {
             Column(
               
               children: [
-                IconButton
-                (
-                  onPressed: (){}, icon: Icon(Icons.delete_forever_outlined))
+               editbutton(context)
                 ],
             )
           ],
@@ -162,4 +160,25 @@ class ListItem extends StatelessWidget {
       ),
     );
   }
+}
+
+
+IconButton editbutton(BuildContext context) {
+  return IconButton(
+      onPressed: () => showDialog(
+          context: context,
+          builder: (BuildContext context) => AlertDialog(
+                title: const Text('Bạn Muốn Xóa Sân'),
+                actions: [
+                  TextButton(
+                    onPressed: () => Navigator.pop(context, 'Cancel'),
+                    child: const Text('Cancel'),
+                  ),
+                  TextButton(
+                    onPressed: () => Navigator.pop(context, 'OK'),
+                    child: const Text('OK'),
+                  ),
+                ],
+              )),
+      icon: Icon(Icons.delete));
 }

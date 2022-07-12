@@ -17,16 +17,6 @@ class _DatLichState extends State<DatLich> {
   
   @override
   Widget build(BuildContext context) {
-    Future<TimeOfDay?> selectedTimeRTL = showTimePicker(
-  context: context,
-  initialTime: TimeOfDay.now(),
-  builder: (BuildContext context, Widget? child) {
-    return Directionality(
-      textDirection: TextDirection.rtl,
-      child: child!,
-    );
-  },
-);
     return Scaffold(
       appBar: AppBar(
           backgroundColor: Colors.green[400],
@@ -99,10 +89,10 @@ class _DatLichState extends State<DatLich> {
                               fontSize: 20,
                             )),
                         Spacer(),
-                        TextButton(
-                         onPressed: (){},
-                         child: Text("123"),
-                            ),
+                        Text("18h:00 ~ 19h:00",
+                            style: TextStyle(
+                              fontSize: 20,
+                            )),
                             
                       ]),
                 ),
@@ -117,11 +107,15 @@ class _DatLichState extends State<DatLich> {
                       style:
                           TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
                   Spacer(),
-                  Text("11 : 00",
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          backgroundColor: Colors.grey[400]))
+                  TextButton(onPressed: (){
+                    showTimePicker(context: context, initialTime: TimeOfDay(hour: 11, minute: 00));
+                  }, 
+                  child: Text("11 : 00",style: TextStyle(
+                        fontSize: 20,
+                        color: Color.fromARGB(255, 15, 7, 255),
+                        fontWeight: FontWeight.bold,
+                        backgroundColor: Colors.grey[400],
+                      )))
                 ],
               ),
             ),
@@ -138,12 +132,15 @@ class _DatLichState extends State<DatLich> {
                     ),
                   ),
                   Spacer(),
-                  Text("13 : 00",
-                      style: TextStyle(
+                   TextButton(onPressed: (){
+                    showTimePicker(context: context, initialTime: TimeOfDay(hour: 11, minute: 00));
+                   }, 
+                  child: Text("13 : 00",style: TextStyle(
                         fontSize: 20,
+                        color: Color.fromARGB(255, 15, 7, 255),
                         fontWeight: FontWeight.bold,
                         backgroundColor: Colors.grey[400],
-                      )),
+                      )))
 
                 ],
               ),
@@ -151,12 +148,6 @@ class _DatLichState extends State<DatLich> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text("Tổng Tiền : 250.000 VND",style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text("*Đã áp dụng Giờ Vàng*",
-              style: TextStyle(color: Colors.red, fontSize: 25),
-              ),
             ),
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
